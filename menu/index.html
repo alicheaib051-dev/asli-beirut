@@ -89,9 +89,8 @@ footer a.loc span{display:block;font-weight:400;font-size:.78rem;opacity:.7;marg
 .chips{animation:fadeDown .55s .12s cubic-bezier(.22,1,.36,1) both}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
 .top.sc{box-shadow:0 10px 26px -14px rgba(0,0,0,.8)}
-/* photos fade in as they load, zoom on touch */
-.ph img{opacity:0;transition:opacity .5s ease,transform .6s cubic-bezier(.22,1,.36,1)}
-.ph img.ld{opacity:1}
+/* photos zoom on touch (the card reveal already fades them in) */
+.ph img{transition:transform .6s cubic-bezier(.22,1,.36,1)}
 .card.has:hover .ph img{transform:scale(1.06)}
 .card.has:active{transform:scale(.97)!important}
 .card.has:active .ph img{transform:scale(1.03)}
@@ -108,7 +107,6 @@ footer a.loc span{display:block;font-weight:400;font-size:.78rem;opacity:.7;marg
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important}
   .js .card,.js .chead h2,.js .cat-ar{opacity:1!important;transform:none!important}
-  .ph img{opacity:1!important}
 }
 </style>
 <script>document.documentElement.className+=' js';</script>
@@ -187,11 +185,6 @@ var cio=new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); cio.unobserve(e.target); } });
 },{threshold:0.04});
 cats.forEach(function(s){ cio.observe(s); });
-/* fade photos in once decoded */
-[].slice.call(document.querySelectorAll('.ph img')).forEach(function(im){
-  if(im.complete && im.naturalWidth) im.classList.add('ld');
-  else im.addEventListener('load',function(){ im.classList.add('ld'); });
-});
 /* top bar gets a shadow once you scroll */
 var topbar=document.querySelector('.top');
 addEventListener('scroll',function(){ topbar.classList.toggle('sc', window.scrollY>6); },{passive:true});
