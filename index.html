@@ -558,95 +558,91 @@ body.menupage-open{overflow:hidden}
 @media(max-width:560px){.mp-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.mp-card h3{font-size:.95rem}.mp-hero .k{letter-spacing:.2em;font-size:.68rem}.mp-chead{flex-direction:column;align-items:flex-start;gap:3px}.mp-chead::after{display:none}.mp-cat-ar{font-size:1.15rem}}
 
 
-/* ================= SCROLL FILM — "The Journey" ================= */
-#journey{position:relative;background:#141210}
+/* ================= THE JOURNEY (v3 — GPU scroll sequence) =================
+   Every animated property here is `transform` or `opacity` only. Both are
+   composited on the GPU, so scrolling never triggers layout or paint. */
+#journey{position:relative;background:#100E0C}
 .jr-track{position:relative;width:100%}
-.jr-stage{position:sticky;top:0;height:100svh;min-height:560px;overflow:hidden;
-  background:#141210;isolation:isolate}
-.jr-scene{position:absolute;inset:0;opacity:0;will-change:opacity;z-index:10}
-.jr-scene .jr-still,.jr-scene video{position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;display:block}
-.jr-scene video{opacity:0;transition:opacity .5s ease}
-.jr-scene.has-clip video{opacity:1}
-.jr-scene.has-clip .jr-still{opacity:0;transition:opacity .5s ease}
+.jr-stage{position:sticky;top:0;height:100svh;min-height:600px;overflow:hidden;
+  background:#100E0C;isolation:isolate}
 
-/* Cinematic grade + copy scrim. The left-side wash is not decoration: the frame
-   under the copy CHANGES continuously as you scrub, so legibility can't depend on
-   any one frame being dark. The scrim guarantees a readable base throughout. */
-.jr-grade{position:absolute;inset:0;pointer-events:none;z-index:60;
-  background:
-    linear-gradient(to right,rgba(20,18,16,.88) 0%,rgba(20,18,16,.62) 34%,rgba(20,18,16,.12) 62%,transparent 78%),
-    radial-gradient(125% 95% at 50% 32%,transparent 26%,rgba(20,18,16,.5) 76%,rgba(20,18,16,.92) 100%),
-    linear-gradient(to top,rgba(20,18,16,.94) 0%,rgba(20,18,16,.42) 40%,transparent 68%)}
-@media(max-width:880px){
-  /* on a phone the copy spans the full width — wash the whole lower frame instead */
-  .jr-grade{background:
-    linear-gradient(to top,rgba(20,18,16,.95) 0%,rgba(20,18,16,.72) 34%,rgba(20,18,16,.2) 62%,transparent 82%),
-    radial-gradient(130% 100% at 50% 30%,transparent 24%,rgba(20,18,16,.55) 78%,rgba(20,18,16,.9) 100%)}
-}
+.jr-scene{position:absolute;inset:0;opacity:0;will-change:opacity}
+
+/* layer 1 — blurred backdrop, drifts slowly for depth */
+.jr-bd{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;
+  will-change:transform;transform:translate3d(0,0,0) scale(1.05)}
+.jr-scene::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(105deg,rgba(16,14,12,.96) 0%,rgba(16,14,12,.9) 32%,
+    rgba(16,14,12,.55) 52%,rgba(16,14,12,.35) 72%,rgba(16,14,12,.6) 100%)}
+
+/* layer 2 — the sharp panel (kept near native px so it never upscales) */
+.jr-panel{position:absolute;right:4.5vw;top:50%;width:46vw;max-width:760px;
+  aspect-ratio:3/2;border-radius:3px;overflow:hidden;z-index:3;
+  transform:translate3d(0,-50%,0);
+  box-shadow:0 50px 90px -30px rgba(0,0,0,.85),0 0 0 1px rgba(247,240,225,.09)}
+.jr-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  will-change:transform}
+
+/* layer 3 — floating detail card, parallaxes at a different rate = depth */
+.jr-card{position:absolute;right:38vw;bottom:11vh;width:16vw;min-width:150px;
+  max-width:230px;aspect-ratio:3/2;border-radius:2px;overflow:hidden;z-index:4;
+  will-change:transform,opacity;
+  box-shadow:0 30px 60px -18px rgba(0,0,0,.9),0 0 0 1px rgba(247,240,225,.14)}
+.jr-card img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ghost numeral — editorial anchor behind the copy */
+.jr-ghost{position:absolute;left:2.5vw;top:46%;z-index:2;font-family:'Fraunces',serif;
+  font-weight:700;font-size:clamp(11rem,26vw,26rem);line-height:.8;color:rgba(247,240,225,.045);
+  transform:translate3d(0,-50%,0);will-change:transform;pointer-events:none;user-select:none}
 
 /* ---- copy ---- */
-.jr-copy-layer{position:absolute;inset:0;z-index:80;pointer-events:none}
-.jr-copy{position:absolute;left:clamp(20px,6vw,92px);
-  bottom:calc(clamp(52px,11vh,120px) + env(safe-area-inset-bottom));
-  width:min(680px,calc(100% - clamp(40px,12vw,184px)));opacity:0;pointer-events:none}
-.jr-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Karla',sans-serif;
-  font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:16px;text-shadow:0 2px 12px rgba(0,0,0,.7)}
-.jr-eyebrow::before{content:"";width:26px;height:1.5px;background:var(--terra);display:block}
+.jr-copy-layer{position:absolute;inset:0;z-index:10;pointer-events:none}
+.jr-copy{position:absolute;left:clamp(22px,6.5vw,104px);top:50%;
+  width:min(500px,44vw);opacity:0;transform:translate3d(0,-50%,0);will-change:opacity}
+.jr-line{will-change:transform,opacity}
+.jr-eyebrow{display:inline-flex;align-items:center;gap:11px;font-family:'Karla',sans-serif;
+  font-size:.7rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--jr-accent,#BC5233);margin-bottom:18px}
+.jr-eyebrow::before{content:"";width:30px;height:1.5px;background:currentColor;display:block}
 .jr-copy h3{font-family:'Fraunces',serif;font-weight:600;color:var(--cream);
-  font-size:clamp(2rem,5.4vw,3.9rem);line-height:1.04;letter-spacing:-.015em;
-  text-shadow:0 4px 34px rgba(0,0,0,.6);margin-bottom:14px}
-/* direction:rtl keeps correct Arabic shaping/order, but its default right-align
-   would flush the line to the far edge of the copy block and visually detach it
-   from the headline — pin it left so the column reads as one unit. */
-.jr-ar{font-family:'Amiri',serif;font-size:clamp(1.05rem,2.3vw,1.5rem);color:var(--gold);
-  margin-bottom:14px;direction:rtl;text-align:left;
-  text-shadow:0 2px 14px rgba(0,0,0,.65)}
-.jr-copy p{color:rgba(247,240,225,.84);font-size:clamp(.95rem,1.5vw,1.08rem);
-  line-height:1.65;max-width:52ch;text-shadow:0 2px 16px rgba(0,0,0,.5)}
-.jr-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
-.jr-tag{font-family:'Karla',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--cream);padding:7px 15px;border-radius:100px;
-  border:1px solid rgba(247,240,225,.28);background:rgba(20,18,16,.34);backdrop-filter:blur(7px)}
-.jr-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;pointer-events:auto}
+  font-size:clamp(2rem,4.4vw,3.5rem);line-height:1.03;letter-spacing:-.02em;margin-bottom:16px}
+.jr-ar{font-family:'Amiri',serif;font-size:clamp(1rem,1.9vw,1.35rem);
+  color:var(--gold);margin-bottom:16px;direction:rtl;text-align:left}
+.jr-copy p{color:rgba(247,240,225,.76);font-size:clamp(.92rem,1.15vw,1.04rem);
+  line-height:1.68;max-width:44ch}
+.jr-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.jr-tag{font-family:'Karla',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:rgba(247,240,225,.9);padding:7px 14px;border-radius:100px;
+  border:1px solid rgba(247,240,225,.24)}
+.jr-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px;pointer-events:auto}
 
-/* ---- chapter rail ---- */
-.jr-rail{position:absolute;right:clamp(16px,3vw,42px);top:50%;transform:translateY(-50%);
-  z-index:90;display:flex;flex-direction:column;gap:16px;pointer-events:auto}
-.jr-dot{position:relative;width:11px;height:11px;border-radius:50%;border:0;cursor:pointer;
-  padding:0;background:rgba(247,240,225,.3);transition:background .35s,transform .35s}
-.jr-dot.on{background:var(--terra);transform:scale(1.45)}
-.jr-dot::after{content:attr(data-label);position:absolute;right:22px;top:50%;
-  transform:translateY(-50%);white-space:nowrap;font-family:'Karla',sans-serif;
-  font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--cream);opacity:0;transition:opacity .3s;pointer-events:none;
-  text-shadow:0 2px 10px rgba(0,0,0,.7)}
-.jr-dot:hover::after,.jr-dot.on::after{opacity:.95}
-
-/* ---- counter + film progress ---- */
-.jr-count{position:absolute;left:clamp(20px,6vw,92px);top:clamp(88px,13vh,124px);z-index:85;
-  font-family:'Karla',sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.26em;
-  color:rgba(247,240,225,.62)}
-.jr-count b{color:var(--cream);font-size:1.05rem}
-.jr-bar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:88;background:rgba(247,240,225,.14)}
+/* ---- chrome ---- */
+.jr-rail{position:absolute;right:clamp(14px,2.2vw,30px);top:50%;transform:translateY(-50%);
+  z-index:20;display:flex;flex-direction:column;gap:14px;pointer-events:auto}
+.jr-dot{position:relative;width:9px;height:9px;border-radius:50%;border:0;cursor:pointer;padding:0;
+  background:rgba(247,240,225,.26);transition:background .4s,transform .4s}
+.jr-dot.on{background:var(--jr-accent,#BC5233);transform:scale(1.5)}
+.jr-count{position:absolute;left:clamp(22px,6.5vw,104px);top:clamp(80px,12vh,116px);z-index:20;
+  font-family:'Karla',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.28em;
+  color:rgba(247,240,225,.5)}
+.jr-count b{color:var(--cream);font-size:1rem}
+.jr-bar{position:absolute;left:0;right:0;bottom:0;height:2px;z-index:20;background:rgba(247,240,225,.1)}
 .jr-bar i{display:block;height:100%;width:100%;transform:scaleX(0);transform-origin:0 50%;
-  background:linear-gradient(90deg,var(--terra),var(--gold))}
-.jr-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:86;
-  font-family:'Karla',sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.3em;
-  text-transform:uppercase;color:rgba(247,240,225,.66);pointer-events:none}
-.jr-hint::after{content:"";display:block;width:1px;height:22px;margin:9px auto 0;
-  background:linear-gradient(to bottom,var(--cream),transparent);animation:jrPulse 1.9s ease-in-out infinite}
-@keyframes jrPulse{0%,100%{opacity:.25;transform:scaleY(.55)}50%{opacity:1;transform:scaleY(1)}}
+  background:linear-gradient(90deg,var(--terra),var(--gold));will-change:transform}
 
-@media(max-width:880px){
-  .jr-rail{right:12px;gap:13px}
-  .jr-dot::after{display:none}
-  .jr-copy{width:calc(100% - 64px);bottom:calc(64px + env(safe-area-inset-bottom))}
-  .jr-count{top:80px}
+@media(max-width:900px){
+  .jr-scene::after{background:linear-gradient(to top,rgba(16,14,12,.97) 0%,
+    rgba(16,14,12,.86) 34%,rgba(16,14,12,.4) 62%,rgba(16,14,12,.72) 100%)}
+  .jr-panel{right:auto;left:50%;top:26%;width:82vw;max-width:none;
+    transform:translate3d(-50%,-50%,0)}
+  .jr-card{right:6vw;bottom:auto;top:46%;width:26vw;min-width:96px}
+  .jr-copy{top:auto;bottom:calc(6vh + env(safe-area-inset-bottom));width:calc(100% - 44px);
+    transform:none}
+  .jr-ghost{font-size:9rem;top:20%;left:4vw}
+  .jr-rail{right:10px;gap:11px}
 }
 @media(prefers-reduced-motion:reduce){
-  .jr-hint::after{animation:none}
+  .jr-bd,.jr-panel img,.jr-card,.jr-ghost,.jr-line{transform:none !important}
 }
 
 </style>
@@ -805,15 +801,13 @@ function imgFail(img){
   </div>
 </section>
 
-<!-- ============ SCROLL FILM — THE JOURNEY ============ -->
+<!-- ============ THE JOURNEY (v3) ============ -->
 <section id="journey" aria-label="The Asli Beirut journey">
   <div class="jr-track" id="jrTrack">
     <div class="jr-stage" id="jrStage">
-      <div class="jr-grade"></div>
       <div class="jr-count" id="jrCount"><b>01</b> / 04</div>
       <div class="jr-copy-layer" id="jrCopy"></div>
       <div class="jr-rail" id="jrRail"></div>
-      <div class="jr-hint" id="jrHint">Keep scrolling</div>
       <div class="jr-bar"><i id="jrBar"></i></div>
     </div>
   </div>
@@ -1292,264 +1286,180 @@ m.addEventListener('scroll',function(){var cur=secs[0];secs.forEach(function(s){
 
 <script>
 /* ===========================================================================
-   THE JOURNEY — scroll-scrubbed cinematic chain.
-   Scroll drives video time (not autoplay). Technique ported from the
-   scroll-world scrub engine, applied to Asli Beirut's OWN real footage:
-     - clips fetched as Blobs  -> guaranteed seekable (no byte-range dependency)
-     - rAF lerp toward target  -> smooth, decoupled from scroll event rate
-     - seek coalescing         -> never queue a seek while decoder is busy
-     - iOS priming             -> muted play/pause on first gesture so frames paint
-     - still poster held       -> until the clip actually paints a frame
-     - crossfade at seams      -> chapter changes dissolve instead of cutting
+   THE JOURNEY v3 — GPU scroll sequence.
+   v2 scrubbed video and could not be smooth: the source clips carry only two
+   keyframes each, so every seek decoded up to ~240 frames. Here nothing decodes.
+   Each frame we write only `transform` and `opacity`, both composited on the
+   GPU — no layout, no paint. Scroll position is lerped so motion trails the
+   wheel slightly, which is what reads as "expensive".
    =========================================================================== */
 (function(){
-  var CH = [
-    { clip:'visuals/hero.mp4',    still:'visuals/00-hero-background.jpg',
-      label:'The Fire',  scroll:1.55, linger:0.34,
+  var CH=[
+    { key:'01-fire', label:'The Fire', accent:'#BC5233', scroll:0.95,
       eyebrow:'Chapter 01 — The Fire',
       title:'Real charcoal.<br>Never gas.',
       ar:'على الفحم الأصلي',
       body:'Every skewer meets live coals. It is slower, it is harder, and it is the only way we know how to cook.',
-      tags:['Live coals','Since 2022'] },
-
-    { clip:'visuals/orbit.mp4',   still:'visuals/03-dish-1-mixed-grill.jpg',
-      label:'The Mezze', scroll:1.75, linger:0.40,
+      tags:['Special Mixed Grill · 94 AED','Lamb Chops · 89 AED'] },
+    { key:'02-mezze', label:'The Mezze', accent:'#3C8450', scroll:0.95,
       eyebrow:'Chapter 02 — The Mezze',
       title:'Whipped, rolled<br>and shaped by hand.',
       ar:'كل شي بالإيد — كل يوم',
-      body:'Hummus whipped fresh every morning. Kibbeh shaped by hand. Everything made the way it was made at home in Beirut.',
+      body:'Hummus whipped fresh every morning, tabbouleh chopped fine, mezze laid out the way it is at home in Beirut.',
       tags:['Hummous · 26 AED','Fatoush · 29 AED'] },
-
-    { clip:'visuals/montage.mp4', still:'visuals/07-dish-5-chicken-shawarma.jpg',
-      label:'The Shawarma', scroll:1.55, linger:0.32,
+    { key:'03-shawarma', label:'The Shawarma', accent:'#C89B3C', scroll:0.95,
       eyebrow:'Chapter 03 — The Shawarma',
       title:'Stacked daily.<br>Shaved to order.',
       ar:'شاورما محضّرة كل يوم',
       body:'Stacked fresh every day and shaved thin the moment you order — never pre-cut, never reheated.',
-      tags:['Chicken wrap · 22 AED','Meat wrap · 26 AED'] },
-
-    { clip:'visuals/reel.mp4',    still:'visuals/09-banner-parallax.jpg',
-      label:'The Table', scroll:1.95, linger:0.46,
+      tags:['Chicken Wrap · 22 AED','Meat Wrap · 26 AED'] },
+    { key:'04-table', label:'The Table', accent:'#BC5233', scroll:1.15,
       eyebrow:'Chapter 04 — The Table',
       title:'From our home<br>to your table.',
       ar:'من بيتنا لسفرتكم',
       body:'Family recipes carried from Beirut to two Dubai kitchens. Pull up a chair — the table is ready.',
-      tags:['42 dishes','2 locations'],
-      cta:true }
+      tags:['42 dishes','2 locations'], cta:true }
   ];
 
-  var track = document.getElementById('jrTrack'),
-      stage = document.getElementById('jrStage'),
-      copyL = document.getElementById('jrCopy'),
-      railE = document.getElementById('jrRail'),
-      barE  = document.getElementById('jrBar'),
-      cntE  = document.getElementById('jrCount'),
-      hintE = document.getElementById('jrHint');
+  var track=document.getElementById('jrTrack'), stage=document.getElementById('jrStage'),
+      copyL=document.getElementById('jrCopy'), railE=document.getElementById('jrRail'),
+      barE=document.getElementById('jrBar'), cntE=document.getElementById('jrCount');
   if(!track||!stage) return;
 
-  var reduce  = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-      coarse  = window.matchMedia('(pointer: coarse)').matches,
-      smallMQ = window.matchMedia('(max-width: 860px)');
-  function isMobile(){ return coarse || smallMQ.matches; }
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var coarse=window.matchMedia('(pointer: coarse)').matches;
+  var N=CH.length, total=0, active=-1, ticking=false, laidOutW=0;
 
-  var CROSSFADE = 0.14;              // seam dissolve width, in viewport heights
-  var N = CH.length, total = 0, active = -1, ticking = false;
-  var laidOutW = window.innerWidth || document.documentElement.clientWidth || 0;
+  function clamp(x,a,b){a=(a==null?0:a);b=(b==null?1:b);return Math.min(b,Math.max(a,x));}
+  function smooth(x){x=clamp(x);return x*x*(3-2*x);}
 
-  function clamp(x,a,b){ a=(a==null?0:a); b=(b==null?1:b); return Math.min(b,Math.max(a,x)); }
-  function smooth(x){ x=clamp(x); return x*x*(3-2*x); }
-  // monotone dwell remap: camera settles mid-chapter (where the copy peaks),
-  // moves quicker near the seams. f(0)=0, f(1)=1 so seam frames are untouched.
-  function lingerEase(x,L){ L=clamp(L); var c=x-0.5; return (1-L)*x + L*(4*c*c*c+0.5); }
-
-  // ---- build scenes, copy blocks and rail dots ----
   CH.forEach(function(c,i){
-    var sc = document.createElement('div'); sc.className='jr-scene';
-    var im = document.createElement('img'); im.className='jr-still'; im.src=c.still;
-    im.alt=''; im.setAttribute('aria-hidden','true'); im.loading = i?'lazy':'eager';
-    sc.appendChild(im); stage.insertBefore(sc, stage.firstChild);
-    c._el=sc; c._img=im; c._cur=0; c._target=0;
-    // Fail-safe first paint: chapter 1 is visible before any scroll/rAF work
-    // happens, so the section can never render as an empty black box if the
-    // first measurement lands early (fonts/images still settling).
-    if(i===0){ sc.style.opacity='1'; sc.style.zIndex=30; }
+    var sc=document.createElement('div'); sc.className='jr-scene';
+    sc.innerHTML =
+      '<img class="jr-bd" src="journey/'+c.key+'-bd.jpg" alt="" aria-hidden="true">'+
+      '<div class="jr-ghost">'+String(i+1).padStart(2,'0')+'</div>'+
+      '<div class="jr-panel"><img src="journey/'+c.key+'-panel.jpg" alt="" aria-hidden="true" '+
+        (i?'loading="lazy"':'')+'></div>'+
+      '<div class="jr-card"><img src="journey/'+c.key+'-card.jpg" alt="" aria-hidden="true" '+
+        (i?'loading="lazy"':'')+'></div>';
+    stage.insertBefore(sc, stage.firstChild);
+    c._el=sc; c._bd=sc.querySelector('.jr-bd'); c._panelImg=sc.querySelector('.jr-panel img');
+    c._card=sc.querySelector('.jr-card'); c._ghost=sc.querySelector('.jr-ghost');
+    c._cur=0; c._target=0;
 
-    var cp = document.createElement('div'); cp.className='jr-copy';
-    var h = '<div class="jr-eyebrow">'+c.eyebrow+'</div>'+
-            '<h3>'+c.title+'</h3>'+
-            '<div class="jr-ar">'+c.ar+'</div>'+
-            '<p>'+c.body+'</p>';
-    if(c.tags&&c.tags.length){
-      h += '<div class="jr-tags">'+c.tags.map(function(t){
-             return '<span class="jr-tag">'+t+'</span>'; }).join('')+'</div>';
-    }
-    if(c.cta){
-      h += '<div class="jr-cta">'+
-           '<a href="#" class="btn btn-primary" onclick="openMenu();return false;">Explore the Menu</a>'+
-           '<a href="#locations" class="btn btn-ghost">Find Us</a></div>';
-    }
-    cp.innerHTML=h; copyL.appendChild(cp); c._copy=cp;
-    if(i===0){ cp.style.opacity='1'; }
+    var cp=document.createElement('div'); cp.className='jr-copy';
+    cp.style.setProperty('--jr-accent',c.accent);
+    var h='<div class="jr-line"><div class="jr-eyebrow">'+c.eyebrow+'</div></div>'+
+          '<div class="jr-line"><h3>'+c.title+'</h3></div>'+
+          '<div class="jr-line"><div class="jr-ar">'+c.ar+'</div></div>'+
+          '<div class="jr-line"><p>'+c.body+'</p></div>';
+    if(c.tags) h+='<div class="jr-line"><div class="jr-tags">'+c.tags.map(function(t){
+      return '<span class="jr-tag">'+t+'</span>';}).join('')+'</div></div>';
+    if(c.cta) h+='<div class="jr-line"><div class="jr-cta">'+
+      '<a href="#" class="btn btn-primary" onclick="openMenu();return false;">Explore the Menu</a>'+
+      '<a href="#locations" class="btn btn-ghost">Find Us</a></div></div>';
+    cp.innerHTML=h; copyL.appendChild(cp);
+    c._copy=cp; c._lines=cp.querySelectorAll('.jr-line');
 
-    var d = document.createElement('button');
-    d.className='jr-dot'; d.type='button';
-    d.setAttribute('data-label',c.label);
+    var d=document.createElement('button'); d.className='jr-dot'; d.type='button';
+    d.style.setProperty('--jr-accent',c.accent);
     d.setAttribute('aria-label','Go to '+c.label);
     d.onclick=function(){ jumpTo(i); };
     railE.appendChild(d); c._dot=d;
   });
 
-  /* Layout is GEOMETRY-driven, never computed from window.innerHeight.
-     We hand the browser a CSS vh value (it always resolves that correctly, even
-     where JS viewport reads return 0 — embedded panes, some headless contexts),
-     then measure the real rendered box. Chapter bands are fractions of the
-     actual stuck-scroll distance, so nothing depends on a JS viewport number. */
+  function trackTop(){ return track.getBoundingClientRect().top+(window.scrollY||window.pageYOffset); }
   function layout(){
-    var sum=0; CH.forEach(function(c){ sum+=c.scroll; });
-    track.style.height = ((sum+1)*100)+'vh';          // browser resolves vh
-    var stageH = stage.offsetHeight || 560;
-    var scrub  = Math.max(1, track.offsetHeight - stageH);
+    var sum=0; CH.forEach(function(c){sum+=c.scroll;});
+    track.style.height=((sum+1)*100)+'vh';
+    var scrub=Math.max(1, track.offsetHeight-(stage.offsetHeight||600));
     var off=0;
-    CH.forEach(function(c){
-      c._start = (off/sum)*scrub; off+=c.scroll; c._end = (off/sum)*scrub;
-    });
-    total = scrub;
-    laidOutW = window.innerWidth || document.documentElement.clientWidth || laidOutW;
+    CH.forEach(function(c){ c._start=(off/sum)*scrub; off+=c.scroll; c._end=(off/sum)*scrub; });
+    total=scrub;
+    laidOutW=window.innerWidth||document.documentElement.clientWidth||laidOutW;
     read();
   }
-  /* Document-absolute top of the track. NOT offsetTop — #journey is
-     position:relative, so offsetTop would be measured against it (≈0) and every
-     chapter band would fire at the wrong scroll position. Read fresh each frame
-     so images/fonts loading above the fold can't desync the bands. */
-  function trackTop(){
-    return track.getBoundingClientRect().top + (window.scrollY||window.pageYOffset);
-  }
   function jumpTo(i){
-    var top = trackTop() + CH[i]._start + (CH[i]._end-CH[i]._start)*0.45;
-    window.scrollTo({ top: top, behavior: reduce?'auto':'smooth' });
-  }
-
-  // ---- blob load: guarantees video.seekable (static hosts often skip byte ranges) ----
-  function loadClip(c){
-    if(reduce || c._loading || !c.clip) return;
-    c._loading = true;
-    fetch(c.clip).then(function(r){ return r.ok ? r.blob() : Promise.reject(new Error('404')); })
-      .then(function(blob){
-        var v = document.createElement('video');
-        v.muted=true; v.playsInline=true; v.preload='auto';
-        v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.setAttribute('aria-hidden','true');
-        v.src = URL.createObjectURL(blob);
-        v.addEventListener('loadedmetadata', function(){ c._ready=true; read(); });
-        // reveal only once a real frame has painted (iOS stays blank otherwise)
-        v.addEventListener('seeked', function(){ c._el.classList.add('has-clip'); }, {once:true});
-        v.addEventListener('loadeddata', function(){
-          try{ v.pause(); }catch(e){}
-          if(userReady) prime(v);
-        });
-        c._el.appendChild(v); c._video=v; c._has=true;
-      }).catch(function(){ c._loading=false; });
+    window.scrollTo({top:trackTop()+CH[i]._start+(CH[i]._end-CH[i]._start)*0.5,
+                     behavior:reduce?'auto':'smooth'});
   }
 
   function read(){
-    var y = (window.scrollY||window.pageYOffset) - trackTop();
-    var ci=0;
+    var y=(window.scrollY||window.pageYOffset)-trackTop(), ci=0;
     for(var i=0;i<N;i++) if(y>=CH[i]._start) ci=i;
-
     for(var i=0;i<N;i++){
-      var c=CH[i];
-      var len = Math.max(1, c._end-c._start);
-      // bands are expressed as fractions of the chapter's own length — scale-free
-      var fade = CROSSFADE*len;
-      if(y > c._start-1.2*len && y < c._end+1.2*len) loadClip(c);
-      var local = clamp((y-c._start)/len,0,1);
-      c._target = c.linger ? lingerEase(local,c.linger) : local;
-
-      var outside = 0;
-      if(y<c._start) outside=c._start-y; else if(y>c._end) outside=y-c._end;
-      var op = smooth(1-outside/fade);
-      c._el.style.opacity = op;
-      c._visible = op>0.001;
-      c._el.style.zIndex = (i===ci) ? 30 : (10+Math.round(op*10));
-      // still-only fallback (reduced motion, or clip not painted yet): gentle push-in
-      if(!c._has || !c._ready){
-        c._img.style.transform = reduce ? 'none'
-          : 'scale('+(1.04+local*0.13).toFixed(3)+')';
-      }
-      /* Copy timing. Middle chapters peak mid-scene, but the two ends are
-         special-cased: chapter 1 must GREET you (fully lit the moment the film
-         opens, then fade as you push in), and the final chapter must HOLD its
-         CTA to the end instead of fading out just as the visitor is ready to
-         act — a mid-peak curve there would hide the buttons at the exit. */
-      var before = y < c._start, after = y > c._end, cop;
-      if(i===0)            cop = after  ? 0 : smooth(1 - local/0.62);
-      else if(i===N-1)     cop = before ? 0 : smooth(local/0.40);
-      else                 cop = (before||after) ? 0
-                                 : smooth(1-Math.abs(local-0.5)/0.52);
-      c._copy.style.opacity = cop;
-      c._copy.style.transform = reduce ? 'none' : 'translateY('+((0.5-local)*3.2).toFixed(2)+'vh)';
-      c._copy.style.pointerEvents = cop>0.55 ? 'auto' : 'none';
+      var c=CH[i], len=Math.max(1,c._end-c._start);
+      c._target=clamp((y-c._start)/len,0,1);
+      var out=0;
+      if(y<c._start) out=c._start-y; else if(y>c._end) out=y-c._end;
+      var op=smooth(1-out/(0.34*len));
+      /* Copy reveal is driven by this crossfade value, NOT by progress through
+         the chapter. Progress is 0 exactly where the reader lands, so staggering
+         on it leaves the first screen blank — the bug this replaces. */
+      c._op=op;
+      c._el.style.opacity=op;
+      c._el.style.zIndex=(i===ci)?6:2;
+      c._vis=op>0.002;
+      c._copy.style.opacity=op;
+      c._copy.style.zIndex=(i===ci)?6:2;
+      c._copy.style.pointerEvents=op>0.6?'auto':'none';
     }
-
     if(ci!==active){
       active=ci;
       CH.forEach(function(c,k){ c._dot.classList.toggle('on',k===ci); });
-      cntE.innerHTML = '<b>'+String(ci+1).padStart(2,'0')+'</b> / '+String(N).padStart(2,'0');
+      cntE.innerHTML='<b>'+String(ci+1).padStart(2,'0')+'</b> / '+String(N).padStart(2,'0');
+      stage.style.setProperty('--jr-accent',CH[ci].accent);
     }
-    barE.style.transform = 'scaleX('+clamp(y/total)+')';
-    hintE.style.opacity = clamp(1 - y/(0.5*Math.max(1,CH[0]._end-CH[0]._start)));
+    barE.style.transform='scaleX('+clamp(y/total)+')';
     ticking=false;
   }
 
+  /* One rAF loop writes every transform. The lerp makes motion trail the wheel
+     a touch — the difference between "it moves" and "it glides". */
   function raf(){
-    var eps = isMobile() ? 0.02 : 0.008;   // coarser seek step on phones = fewer decodes
     for(var i=0;i<N;i++){
       var c=CH[i];
-      if(!c._has||!c._ready||!c._video) continue;
-      if(c._video.seeking) continue;                       // coalesce: don't pile up seeks
-      if(!c._visible && Math.abs(c._cur-c._target)<0.002) continue;
-      c._cur += (c._target-c._cur)*(reduce?1:0.18);
-      var dur = c._video.duration||1;
-      var t = clamp(c._cur,0,0.999)*dur;
-      if(Math.abs(c._video.currentTime-t)>eps){ try{ c._video.currentTime=t; }catch(e){} }
+      if(!c._vis && Math.abs(c._cur-c._target)<0.0015) continue;
+      c._cur += (c._target-c._cur)*0.14;
+      var p=c._cur, e=smooth(p);
+      // backdrop: slow counter-drift
+      c._bd.style.transform='translate3d(0,'+(-4+p*8).toFixed(2)+'%,0) scale('+(1.10-p*0.05).toFixed(4)+')';
+      // panel: Ken Burns push-in
+      c._panelImg.style.transform='translate3d(0,'+(2.5-p*5).toFixed(2)+'%,0) scale('+(1.14-p*0.14).toFixed(4)+')';
+      // Detail card: present as soon as the chapter is (opacity from the
+      // crossfade, same reason as the copy), while the parallax travel stays
+      // driven by scroll progress so it still glides against the panel.
+      var cEnter=(c._op==null?0:c._op);
+      c._card.style.transform='translate3d(0,'+(28-e*46).toFixed(1)+'px,0) scale('+(0.96+e*0.05).toFixed(4)+')';
+      c._card.style.opacity=cEnter.toFixed(3);
+      // ghost numeral drifts against everything else
+      c._ghost.style.transform='translate3d('+(-2+p*5).toFixed(2)+'vw,-50%,0)';
+      // Copy lines stagger in on the chapter's crossfade, then hold fully lit
+      // for the whole chapter. A gentle scroll-linked drift keeps them alive
+      // without ever fading the text out from under the reader.
+      var enter=(c._op==null?0:c._op), drift=(0.5-p)*10;
+      for(var k=0;k<c._lines.length;k++){
+        var d=k*0.08, lp=clamp((enter-d)/(1-d));
+        c._lines[k].style.transform='translate3d(0,'+(((1-lp)*30)+drift).toFixed(1)+'px,0)';
+        c._lines[k].style.opacity=lp.toFixed(3);
+      }
     }
     requestAnimationFrame(raf);
   }
 
-  // iOS: a muted video that was never played won't paint a seeked frame.
-  var userReady=false;
-  function prime(v){
-    if(!isMobile()||!v) return;
-    try{ var p=v.play(); if(p&&p.then) p.then(function(){ try{v.pause();}catch(e){} }).catch(function(){}); }
-    catch(e){}
-  }
-  function firstGesture(){
-    if(userReady) return; userReady=true;
-    CH.forEach(function(c){ prime(c._video); });
-  }
-  window.addEventListener('pointerdown',firstGesture,{once:true,passive:true});
-  window.addEventListener('touchstart', firstGesture,{once:true,passive:true});
-
   window.addEventListener('scroll',function(){
-    if(!ticking){ ticking=true; requestAnimationFrame(read); }
+    if(!ticking){ticking=true;requestAnimationFrame(read);}
   },{passive:true});
-  // ignore URL-bar-only (height) resizes on touch — they would cause a scroll jump
   window.addEventListener('resize',function(){
-    if(coarse && window.innerWidth===laidOutW) return;
+    if(coarse && window.innerWidth===laidOutW) return;   // ignore URL-bar resizes
     layout();
   },{passive:true});
-  window.addEventListener('orientationchange',function(){ setTimeout(layout,120); });
-
-  // Re-layout whenever the stage's real box changes (font load, image decode,
-  // rotation). More reliable than resize events alone.
-  if(window.ResizeObserver){
-    var ro = new ResizeObserver(function(){ layout(); });
-    ro.observe(stage);
-  }
-
+  window.addEventListener('orientationchange',function(){setTimeout(layout,120);});
+  if(window.ResizeObserver){ new ResizeObserver(function(){layout();}).observe(stage); }
   layout();
   if(!reduce) requestAnimationFrame(raf);
   window.addEventListener('load',layout);
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(layout);
 })();
 </script>
 
