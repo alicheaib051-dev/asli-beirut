@@ -1,17 +1,17 @@
 # Asli Beirut — every link
 
-All 134 links, updated 28 July 2026. Live page: <https://alicheaib051-dev.github.io/asli-beirut/links/>
+All 134 links, updated 28 July 2026. Live page: <https://alicheaib051-dev.github.io/asli-beirut/links/all/>
 
 Prices match the current 41-dish menu. Nothing is posted publicly — these links are unlisted.
 
 ## 🌐 Live pages (4)
 
-These four are the links to actually send people. Everything else on this page is a raw file inside them.
+These are the links to actually send people. Everything else below is a raw file inside them.
 
 - [The Website](https://alicheaib051-dev.github.io/asli-beirut/) — Cinematic hero film, the story, The Journey, signature dishes and the full menu — one page
 - [The QR Menu](https://alicheaib051-dev.github.io/asli-beirut/menu/) — 41 dishes · 7 sections · 24 photos · English + Arabic search · installs to the home screen
 - [Overview page](https://alicheaib051-dev.github.io/asli-beirut/review/) — Every ad, TV screen and social image playable in one scroll — the best link to show someone
-- [This links page](https://alicheaib051-dev.github.io/asli-beirut/links/) — The page you are reading — send it to anyone who needs the whole set
+- [The short links page](https://alicheaib051-dev.github.io/asli-beirut/links/) — Just the website, the menu, the 3 screens and the ads — the one to send people
 
 ## 🎯 Jump straight to a section (13)
 
