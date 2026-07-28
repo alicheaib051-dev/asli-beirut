@@ -3,89 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Asli Beirut — All Links</title>
+<title>Asli Beirut — Every Link</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Every Asli Beirut link in one place — website, QR menu, ads, TV screens and every image.">
+<link rel="icon" href="../icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=Karla:wght@400;600;700&family=Amiri&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#F7F0E1;--paper:#FBF6EB;--terra:#BC5233;--gold:#C89B3C;--gold2:#E7B24B;--brown:#3A2A20;--brown2:#57402F;--char:#141210;--olive:#3C8450}
+:root{--cream:#F7F0E1;--paper:#FBF6EB;--terra:#BC5233;--gold:#C89B3C;--gold2:#E7B24B;
+  --brown:#3A2A20;--brown2:#57402F;--char:#141210;--olive:#3C8450;--line:rgba(58,42,32,.12)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Karla',sans-serif;background:var(--cream);color:#2C2018;line-height:1.6;padding-bottom:60px}
-h1,h2{font-family:'Fraunces',serif}
+body{font-family:'Karla',sans-serif;background:var(--cream);color:#2C2018;line-height:1.55;
+  padding-bottom:70px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:'Fraunces',serif}
 .ar{font-family:'Amiri',serif;direction:rtl}
-.hero{background:radial-gradient(ellipse at top,#241a13,var(--char));color:var(--cream);text-align:center;padding:46px 20px 38px}
-.hero h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:600}
-.hero .k{color:var(--gold2);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;font-weight:700;margin-bottom:8px}
-.hero p{color:rgba(247,240,225,.7);font-size:.9rem;margin-top:8px}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px}
-h2{font-size:1.25rem;color:var(--brown);margin:34px 0 4px;display:flex;align-items:baseline;gap:10px}
-h2 .ar{color:var(--olive);font-size:1rem;font-weight:400}
-.note{color:var(--brown2);font-size:.83rem;margin-bottom:10px}
-a.row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);
-  border:1px solid rgba(58,42,32,.1);border-radius:12px;padding:13px 16px;margin:7px 0;text-decoration:none;color:inherit;
-  transition:transform .15s, box-shadow .15s}
-a.row:hover{transform:translateY(-2px);box-shadow:0 12px 24px -18px rgba(58,42,32,.6)}
-a.row b{font-weight:700;color:var(--brown)}
-a.row small{display:block;color:var(--brown2);font-weight:400;font-size:.8rem}
-a.row .go{flex:none;color:var(--terra);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
-.pair{display:flex;gap:8px;flex:none}
-.pair a{background:var(--terra);color:var(--cream);font-weight:700;font-size:.78rem;padding:7px 13px;border-radius:999px;text-decoration:none;white-space:nowrap}
-.pair a.alt{background:var(--brown2)}
-.rowx{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);
-  border:1px solid rgba(58,42,32,.1);border-radius:12px;padding:13px 16px;margin:7px 0}
-.rowx b{font-weight:700;color:var(--brown)}
-.rowx small{display:block;color:var(--brown2);font-weight:400;font-size:.8rem}
-footer{text-align:center;color:var(--brown2);font-size:.78rem;margin-top:44px}
+a{color:inherit}
+
+.hero{background:radial-gradient(ellipse at top,#241a13,var(--char));color:var(--cream);
+  text-align:center;padding:52px 20px 42px}
+.hero .k{color:var(--gold2);letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;font-weight:700}
+.hero h1{font-size:clamp(1.8rem,5.2vw,2.7rem);font-weight:600;margin:10px 0 6px}
+.hero p{color:rgba(247,240,225,.72);font-size:.92rem;max-width:560px;margin:0 auto}
+.stats{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.stat{border:1px solid rgba(247,240,225,.28);border-radius:999px;padding:7px 15px;
+  font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.stat b{color:var(--gold2)}
+
+.wrap{max-width:820px;margin:0 auto;padding:0 15px}
+
+.tools{position:sticky;top:0;z-index:30;background:rgba(247,240,225,.94);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:11px 0;margin-bottom:6px}
+.tools .wrap{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#q{flex:1 1 200px;min-width:150px;font:inherit;font-size:.92rem;padding:10px 13px;
+  border:1px solid var(--line);border-radius:11px;background:var(--paper);color:inherit}
+#q:focus{outline:2px solid var(--gold);outline-offset:1px}
+button{font:inherit;font-weight:700;font-size:.8rem;cursor:pointer;border:0;border-radius:999px;
+  padding:10px 15px;background:var(--brown);color:var(--cream);white-space:nowrap}
+button.ghost{background:transparent;color:var(--brown);border:1px solid var(--line)}
+button:active{transform:translateY(1px)}
+#status{flex-basis:100%;font-size:.8rem;color:var(--brown2);min-height:0}
+#status.on{min-height:1.3em}
+
+h2{font-size:1.16rem;color:var(--brown);margin:30px 0 3px;display:flex;align-items:baseline;
+  gap:9px;flex-wrap:wrap}
+h2 .ar{color:var(--olive);font-size:.95rem;font-weight:400}
+h2 .n{font-size:.72rem;color:var(--brown2);font-family:'Karla',sans-serif;font-weight:700;
+  letter-spacing:.08em}
+.note{color:var(--brown2);font-size:.83rem;margin:4px 0 10px;max-width:64ch}
+
+.row{display:flex;align-items:center;gap:11px;background:var(--paper);border:1px solid var(--line);
+  border-radius:12px;padding:11px 13px;margin:7px 0}
+.row .txt{flex:1;min-width:0}
+.row b{font-weight:700;color:var(--brown);font-size:.94rem;display:block}
+.row small{display:block;color:var(--brown2);font-size:.78rem;word-break:break-word}
+.row .btns{display:flex;gap:6px;flex:none}
+.open{background:var(--terra);color:var(--cream);text-decoration:none;font-weight:700;
+  font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;padding:9px 14px;border-radius:999px}
+.copy{background:transparent;color:var(--brown2);border:1px solid var(--line);
+  font-size:.72rem;padding:9px 11px;text-transform:uppercase;letter-spacing:.05em}
+.copy.done{background:var(--olive);color:var(--cream);border-color:var(--olive)}
+.dot{flex:none;width:9px;height:9px;border-radius:50%;background:var(--line)}
+.dot.ok{background:var(--olive)}
+.dot.bad{background:#C0392B}
+.dot.wait{background:var(--gold2);animation:pulse .9s infinite alternate}
+@keyframes pulse{to{opacity:.25}}
+.row.bad{border-color:#C0392B;background:#fdf1ef}
+
+details{margin:6px 0}
+summary{cursor:pointer;list-style:none;background:var(--paper);border:1px solid var(--line);
+  border-radius:12px;padding:11px 14px;font-weight:700;color:var(--brown);font-size:.9rem;
+  display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary .hint{font-weight:400;color:var(--brown2);font-size:.78rem}
+details[open] summary{border-bottom-left-radius:0;border-bottom-right-radius:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:10px;
+  padding:12px;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;
+  background:rgba(251,246,235,.5)}
+.tile{background:var(--paper);border:1px solid var(--line);border-radius:11px;overflow:hidden;
+  display:flex;flex-direction:column;text-decoration:none}
+.tile .th{aspect-ratio:4/3;background:#e9ded0 center/cover no-repeat;display:block}
+.tile .tb{padding:8px 9px 9px}
+.tile b{display:block;font-size:.79rem;color:var(--brown);line-height:1.3}
+.tile small{display:block;color:var(--brown2);font-size:.68rem;margin-top:2px}
+.tile .mini{display:flex;gap:5px;margin-top:7px}
+.tile .mini a,.tile .mini button{font-size:.66rem;padding:5px 8px;border-radius:999px;
+  text-decoration:none;letter-spacing:.04em;text-transform:uppercase;font-weight:700}
+.tile .mini a{background:var(--terra);color:var(--cream)}
+.tile.bad{border-color:#C0392B}
+
+.hide{display:none !important}
+.empty{color:var(--brown2);font-size:.9rem;padding:18px 2px}
+footer{text-align:center;color:var(--brown2);font-size:.78rem;margin-top:40px;padding:0 16px;line-height:1.7}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,140%);background:var(--char);
+  color:var(--cream);padding:11px 20px;border-radius:999px;font-size:.83rem;font-weight:700;
+  z-index:60;transition:transform .25s;pointer-events:none}
+.toast.show{transform:translate(-50%,0)}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <div class="k">Asli Beirut · أصلي بيروت</div>
-  <h1>Everything we've made — one page</h1>
-  <p>All links live &amp; private (unlisted). Matched to the current 41-item menu. Updated July 2026.</p>
+  <h1>Every link, one page</h1>
+  <p>The website, the QR menu, the ads, the TV screens and every single image — each one a link you can open, copy and send.</p>
+  <div class="stats">
+    <div class="stat"><b>134</b> links</div>
+    <div class="stat"><b>4</b> pages</div>
+    <div class="stat"><b>13</b> videos</div>
+    <div class="stat"><b>102</b> images</div>
+    <div class="stat">Updated <b>28 Jul 2026</b></div>
+  </div>
 </div>
 
-<div class="wrap">
-
-<h2>🌐 Live pages <span class="ar">الموقع والقائمة</span></h2>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/" target="_blank"><span><b>The Website</b><small>Cinematic hero, story, signature dishes, full menu built in</small></span><span class="go">Open →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/menu/" target="_blank"><span><b>The QR Menu</b><small>41 dishes · 24 photos · EN+AR search · NEW burger badges · installable</small></span><span class="go">Open →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/" target="_blank"><span><b>Overview Page</b><small>Every video &amp; image playable in one scroll — best for showing someone</small></span><span class="go">Open →</span></a>
-
-<h2>🎬 The 3 Ads <span class="ar">الإعلانات</span></h2>
-<p class="note">Vertical = Instagram/TikTok · Landscape = screens/YouTube. Original music, ad-safe.</p>
-<div class="rowx"><span><b>Craving Beirut?</b><small>Brand hook · 14s</small></span>
-  <span class="pair"><a href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-CravingBeirut-Vertical.mp4" target="_blank">Vertical</a><a class="alt" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-CravingBeirut-Landscape.mp4" target="_blank">Landscape</a></span></div>
-<div class="rowx"><span><b>Best Sellers</b><small>Dishes + current prices · 13s</small></span>
-  <span class="pair"><a href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-BestSellers-Vertical.mp4" target="_blank">Vertical</a><a class="alt" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-BestSellers-Landscape.mp4" target="_blank">Landscape</a></span></div>
-<div class="rowx"><span><b>Our Dishes — the wheel</b><small>Signature showpiece · 23s</small></span>
-  <span class="pair"><a href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-OurDishes-Vertical.mp4" target="_blank">Vertical</a><a class="alt" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-OurDishes-Landscape.mp4" target="_blank">Landscape</a></span></div>
-
-<h2>📺 The 3 TV Screens <span class="ar">شاشات المطعم</span></h2>
-<p class="note">1080p loops — USB stick → TV → repeat.</p>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Mezze-Shawarma.mp4" target="_blank"><span><b>TV 1 — Mezze &amp; Shawarma</b><small>11 dishes · 39s</small></span><span class="go">Watch →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Offers-Loop.mp4" target="_blank"><span><b>TV 2 (middle) — Prices &amp; Offers</b><small>Rotating boards incl. NEW burgers · 27s</small></span><span class="go">Watch →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png" target="_blank"><span><b>TV 2 — Static version</b><small>Same board as one still image (no motion option)</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Grills.mp4" target="_blank"><span><b>TV 3 — Charcoal Grills</b><small>7 dishes · 27s</small></span><span class="go">Watch →</span></a>
-
-<h2>🖼️ Social &amp; Print Images <span class="ar">للسوشال والطباعة</span></h2>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/Post-MixedGrill-Square.png" target="_blank"><span><b>Feed post — Special Mixed Grill</b><small>AED 94</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/Post-Shawarma-Square.png" target="_blank"><span><b>Feed post — Arabic Meat Shawarma</b><small>AED 39</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/Post-ShishTaouk-Square.png" target="_blank"><span><b>Feed post — Shish Taouk</b><small>AED 56</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/Post-FamilyGrill-Offer-Square.png" target="_blank"><span><b>Offer tile — Mixed Grills 1 kg</b><small>AED 189 · feeds the whole family</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/Poster-FamilyGrill-A4-Print.png" target="_blank"><span><b>A4 print poster — Family Grill + menu QR</b><small>300dpi, print-ready</small></span><span class="go">View →</span></a>
-
-<h2>📱 QR Codes <span class="ar">رموز QR</span></h2>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/qr-menu.png" target="_blank"><span><b>Menu QR</b><small>Plain, high-res — opens the live menu</small></span><span class="go">View →</span></a>
-<a class="row" href="https://alicheaib051-dev.github.io/asli-beirut/review/img/qr-card.png" target="_blank"><span><b>"Scan for our menu" card</b><small>Print-ready table/counter card</small></span><span class="go">View →</span></a>
-
-<h2>⬇️ Need the actual files? <span class="ar">تحميل الملفات</span></h2>
-<p class="note">Every link above opens the file — to save it: on a phone press and hold → Save/Download · on a computer right-click → Save as. Or ask Ali for the originals.</p>
-<div class="rowx"><span><b>Everything here is the final version</b><small>All prices match the current menu · videos are 1080p · images are full resolution · the A4 poster is print-ready 300dpi</small></span></div>
-
+<div class="tools">
+  <div class="wrap">
+    <input id="q" type="search" placeholder="Search — shawarma, TV, poster, burger…" autocomplete="off">
+    <button id="check" type="button">Test every link</button>
+    <button id="copyall" class="ghost" type="button">Copy all</button>
+    <div id="status"></div>
+  </div>
 </div>
 
-<footer>All prices match the July 2026 menu (41 items) · Nothing posted publicly — links are unlisted until approved.<br>أصلي بيروت — Dubai Hills Mall · Dubai Silicon Oasis</footer>
+<div class="wrap" id="out"></div>
 
+<footer>
+  Every link points at the live site and was checked against the files that are actually published.<br>
+  Prices match the current 41-dish menu · nothing is posted publicly — these links are unlisted.<br>
+  <span class="ar">أصلي بيروت</span> — Dubai Hills Mall · Dubai Silicon Oasis
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script id="data" type="application/json">{"site":"https://alicheaib051-dev.github.io/asli-beirut/","groups":[{"id":"pages","icon":"🌐","title":"Live pages","ar":"الصفحات المباشرة","note":"These four are the links to actually send people. Everything else on this page is a raw file inside them.","grid":false,"items":[{"path":"","name":"The Website","sub":"Cinematic hero film, the story, The Journey, signature dishes and the full menu — one page","kind":"page"},{"path":"menu/","name":"The QR Menu","sub":"41 dishes · 7 sections · 24 photos · English + Arabic search · installs to the home screen","kind":"page"},{"path":"review/","name":"Overview page","sub":"Every ad, TV screen and social image playable in one scroll — the best link to show someone","kind":"page"},{"path":"links/","name":"This links page","sub":"The page you are reading — send it to anyone who needs the whole set","kind":"page"}]},{"id":"deep","icon":"🎯","title":"Jump straight to a section","ar":"روابط مباشرة","note":"Same two pages, opened at the exact spot — handy for WhatsApp (“here are the burgers”).","grid":false,"items":[{"path":"#hero","name":"Website — top / hero film","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"#story","name":"Website — our story","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"#journey","name":"Website — The Journey (scroll film)","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"#signature","name":"Website — signature dishes","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"#menuPage","name":"Website — full menu section","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"#locations","name":"Website — the two branches","sub":"Opens the page scrolled to this section","kind":"page"},{"path":"menu/#c-starters-mezze","name":"Menu — Starters & Mezze","sub":"شوربة ومازة","kind":"page"},{"path":"menu/#c-charcoal-grills","name":"Menu — Charcoal Grills","sub":"مشاوي على الفحم","kind":"page"},{"path":"menu/#c-shawarma","name":"Menu — Shawarma","sub":"شاورما","kind":"page"},{"path":"menu/#c-wraps-sandwiches","name":"Menu — Wraps & Sandwiches","sub":"سندويشات","kind":"page"},{"path":"menu/#c-burgers","name":"Menu — Burgers (the 2 NEW ones)","sub":"برجر","kind":"page"},{"path":"menu/#c-kids-combo","name":"Menu — Kids Combo","sub":"كومبو أطفال","kind":"page"},{"path":"menu/#c-dessert-extras","name":"Menu — Dessert & Extras","sub":"حلويات وإضافات","kind":"page"}]},{"id":"ads","icon":"🎬","title":"The 3 ads","ar":"الإعلانات","note":"Vertical (9:16) for Instagram, TikTok and WhatsApp status. Landscape (16:9) for screens and YouTube. Same cut, same original music — every price matches the current menu.","grid":false,"items":[{"path":"review/v/Asli-Ad-CravingBeirut-Vertical.mp4","name":"Craving Beirut? — Vertical","sub":"The brand hook · 1080×1920 · 14s · 6.6 MB","kind":"video"},{"path":"review/v/Asli-Ad-CravingBeirut-Landscape.mp4","name":"Craving Beirut? — Landscape","sub":"The brand hook · 1920×1080 · 14s · 7.9 MB","kind":"video"},{"path":"review/v/Asli-Ad-BestSellers-Vertical.mp4","name":"Best Sellers — Vertical","sub":"The range, with prices · 1080×1920 · 13s · 6.0 MB","kind":"video"},{"path":"review/v/Asli-Ad-BestSellers-Landscape.mp4","name":"Best Sellers — Landscape","sub":"The range, with prices · 1920×1080 · 13s · 7.6 MB","kind":"video"},{"path":"review/v/Asli-Ad-OurDishes-Vertical.mp4","name":"Our Dishes, the wheel — Vertical","sub":"The showpiece · 1080×1920 · 23s · 23.1 MB","kind":"video"},{"path":"review/v/Asli-Ad-OurDishes-Landscape.mp4","name":"Our Dishes, the wheel — Landscape","sub":"The showpiece · 1920×1080 · 23s · 24.8 MB","kind":"video"}]},{"id":"tv","icon":"📺","title":"The 3 TV screens","ar":"شاشات المطعم","note":"One looping file per screen — dishes left and right, prices and offers in the middle. Save each to a USB stick, plug it into the TV, set it to repeat.","grid":false,"items":[{"path":"review/v/Asli-TV1-Mezze-Shawarma.mp4","name":"TV 1 — Mezze & Shawarma","sub":"11 dishes · 1920×1080 · 38s · 16.1 MB","kind":"video"},{"path":"review/v/Asli-TV2-Offers-Loop.mp4","name":"TV 2 (middle) — Prices & Offers","sub":"3 rotating boards incl. the NEW burgers · 1920×1080 · 27s · 3.4 MB","kind":"video"},{"path":"review/img/TV2-Offers-Static.png","name":"TV 2 — static version","sub":"The same board as one still image, if the middle screen can't play video · 1920×1080 · 2.3 MB","kind":"image"},{"path":"review/v/Asli-TV3-Grills.mp4","name":"TV 3 — Charcoal Grills","sub":"7 dishes · 1920×1080 · 26s · 12.4 MB","kind":"video"}]},{"id":"social","icon":"🖼️","title":"Social & print images","ar":"للسوشال والطباعة","note":"Feed posts at current prices, the family offer tile, and the A4 poster at true 300 dpi print size.","grid":false,"items":[{"path":"review/img/Post-MixedGrill-Square.png","name":"Feed post — Special Mixed Grills ½ kg","sub":"AED 94 · 1080×1080 · 2.0 MB","kind":"image"},{"path":"review/img/Post-Shawarma-Square.png","name":"Feed post — Arabic Shawarma Meat (Saj)","sub":"AED 39 · 1080×1080 · 1.9 MB","kind":"image"},{"path":"review/img/Post-ShishTaouk-Square.png","name":"Feed post — Shish Taouk","sub":"AED 56 · 1080×1080 · 1.9 MB","kind":"image"},{"path":"review/img/Post-FamilyGrill-Offer-Square.png","name":"Offer tile — Mixed Grills 1 kg","sub":"AED 189 · feeds the whole family · 1080×1080 · 1.6 MB","kind":"image"},{"path":"review/img/Poster-FamilyGrill-A4-Print.png","name":"A4 poster — Family Grill + menu QR","sub":"Print-ready A4 at 300 dpi · 2480×3508 · 9.0 MB","kind":"image"}]},{"id":"qr","icon":"📱","title":"QR codes","ar":"رموز QR","note":"Both point at the live menu. If the menu link ever changes, these have to be regenerated.","grid":false,"items":[{"path":"review/img/qr-menu.png","name":"Menu QR — plain","sub":"Drop into any design · 1800×1800 · 96 KB","kind":"image"},{"path":"review/img/qr-card.png","name":"“Scan for our menu” card","sub":"Ready for the table or counter · 1200×1680 · 205 KB","kind":"image"}]},{"id":"films","icon":"🎞️","title":"Website films","ar":"أفلام الموقع","note":"The short loops built into the website itself.","grid":false,"items":[{"path":"visuals/hero.mp4","name":"Hero film (in use)","sub":"Plays behind the top of the website · 1280×720 · 10s · 2.5 MB","kind":"video"},{"path":"visuals/montage.mp4","name":"Montage (spare)","sub":"Not on the site right now · 1280×720 · 11s · 1.5 MB","kind":"video"},{"path":"visuals/orbit.mp4","name":"Orbit (spare)","sub":"Not on the site right now · 1280×720 · 16s · 2.3 MB","kind":"video"},{"path":"visuals/reel.mp4","name":"Reel (spare)","sub":"Not on the site right now · 1280×720 · 10s · 2.1 MB","kind":"video"}]},{"id":"photos","icon":"📷","title":"Website photos","ar":"صور الموقع","note":"Every photo used on the website, full resolution.","grid":true,"items":[{"path":"visuals/00-hero-background.jpg","name":"Hero background (behind the film)","sub":"1170×778 · 159 KB","kind":"image"},{"path":"visuals/01-story-1.jpg","name":"Story — the charcoal","sub":"1000×664 · 144 KB","kind":"image"},{"path":"visuals/02-story-2-mezze.jpg","name":"Story — the mezze","sub":"800×531 · 65 KB","kind":"image"},{"path":"visuals/03-dish-1-mixed-grill.jpg","name":"Signature — Mixed Grill","sub":"900×598 · 93 KB","kind":"image"},{"path":"visuals/04-dish-2-hummous-beiruti.jpg","name":"Signature — Hummous Beiruti","sub":"900×598 · 74 KB","kind":"image"},{"path":"visuals/05-dish-3-zaatar-manakish.jpg","name":"Signature — Zaatar Manakish (spare)","sub":"900×598 · 105 KB","kind":"image"},{"path":"visuals/06-dish-4-shish-taouk.jpg","name":"Signature — Shish Taouk","sub":"900×598 · 95 KB","kind":"image"},{"path":"visuals/07-dish-5-chicken-shawarma.jpg","name":"Signature — Chicken Shawarma","sub":"900×598 · 64 KB","kind":"image"},{"path":"visuals/08-dish-6-falafel.jpg","name":"Signature — Falafel","sub":"900×598 · 84 KB","kind":"image"},{"path":"visuals/09-banner-parallax.jpg","name":"Wide banner (spare)","sub":"1170×778 · 172 KB","kind":"image"},{"path":"visuals/10-location-1-silicon-oasis.jpg","name":"Branch — Dubai Silicon Oasis","sub":"900×598 · 73 KB","kind":"image"},{"path":"visuals/11-location-2-dubai-hills.jpg","name":"Branch — Dubai Hills Mall","sub":"900×598 · 89 KB","kind":"image"},{"path":"visuals/12-timeline-1-roots.jpg","name":"Timeline — the roots","sub":"900×598 · 73 KB","kind":"image"},{"path":"visuals/13-timeline-2-2022.jpg","name":"Timeline — 2022","sub":"900×598 · 84 KB","kind":"image"},{"path":"visuals/14-timeline-3-today.jpg","name":"Timeline — today","sub":"900×598 · 114 KB","kind":"image"}]},{"id":"journey","icon":"🔥","title":"The Journey — scroll film frames","ar":"رحلة أصلي بيروت","note":"The four scenes that play as you scroll the website, three crops each.","grid":true,"items":[{"path":"journey/01-fire-bd.jpg","name":"The Fire — backdrop","sub":"640×429 · 6 KB","kind":"image"},{"path":"journey/01-fire-panel.jpg","name":"The Fire — panel","sub":"1100×737 · 228 KB","kind":"image"},{"path":"journey/01-fire-card.jpg","name":"The Fire — card","sub":"720×480 · 89 KB","kind":"image"},{"path":"journey/02-mezze-bd.jpg","name":"The Mezze — backdrop","sub":"640×429 · 6 KB","kind":"image"},{"path":"journey/02-mezze-panel.jpg","name":"The Mezze — panel","sub":"1100×737 · 247 KB","kind":"image"},{"path":"journey/02-mezze-card.jpg","name":"The Mezze — card","sub":"720×480 · 78 KB","kind":"image"},{"path":"journey/03-shawarma-bd.jpg","name":"The Shawarma — backdrop","sub":"640×429 · 6 KB","kind":"image"},{"path":"journey/03-shawarma-panel.jpg","name":"The Shawarma — panel","sub":"1100×737 · 196 KB","kind":"image"},{"path":"journey/03-shawarma-card.jpg","name":"The Shawarma — card","sub":"720×482 · 64 KB","kind":"image"},{"path":"journey/04-table-bd.jpg","name":"The Table — backdrop","sub":"640×426 · 6 KB","kind":"image"},{"path":"journey/04-table-panel.jpg","name":"The Table — panel","sub":"1100×733 · 208 KB","kind":"image"},{"path":"journey/04-table-card.jpg","name":"The Table — card","sub":"720×480 · 71 KB","kind":"image"}]},{"id":"dishes","icon":"🍽️","title":"Dish photos","ar":"صور الأطباق","note":"All 62 dish photos. 24 of them are live on the QR menu; the rest are shot and ready for posts, boards or new menu items.","grid":true,"items":[{"path":"menu-dishes/arabic-shawarma-meat.jpg","name":"Arabic Shawarma Meat · Saj","sub":"On the menu · AED 39 · 1100×737 · 191 KB","kind":"image"},{"path":"menu-dishes/arayes.jpg","name":"Arayes (6 pcs)","sub":"On the menu · AED 39 · 1100×734 · 200 KB","kind":"image"},{"path":"menu-dishes/cheese-roll.jpg","name":"Cheese Roll (5 pcs)","sub":"On the menu · AED 26 · 1100×734 · 183 KB","kind":"image"},{"path":"menu-dishes/chicken-liver.jpg","name":"Chicken Liver","sub":"Extra photo · 1100×737 · 209 KB","kind":"image"},{"path":"menu-dishes/chicken-shawarma-platter.jpg","name":"Plate Shawarma Chicken","sub":"On the menu · AED 41 · 1100×737 · 210 KB","kind":"image"},{"path":"menu-dishes/chicken-shawarma-sandwich.jpg","name":"Chicken Shawarma Wrap (Large)","sub":"On the menu · AED 22 · 1100×737 · 164 KB","kind":"image"},{"path":"menu-dishes/chicken-wings-provencale.jpg","name":"Chicken Wings Provencale","sub":"Extra photo · 1100×737 · 115 KB","kind":"image"},{"path":"menu-dishes/cold-mezza-platter.jpg","name":"Cold Mezza Platter","sub":"Extra photo · 1100×737 · 269 KB","kind":"image"},{"path":"menu-dishes/daily-dish-combination.jpg","name":"Daily Dish Combination","sub":"Extra photo · 1100×734 · 305 KB","kind":"image"},{"path":"menu-dishes/eggs-your-style.jpg","name":"Eggs Your Style","sub":"Extra photo · 1100×734 · 217 KB","kind":"image"},{"path":"menu-dishes/falafel-wrap.jpg","name":"Large Falafel Wrap","sub":"On the menu · AED 23 · 1100×731 · 156 KB","kind":"image"},{"path":"menu-dishes/falafel.jpg","name":"Falafel (6 pcs)","sub":"On the menu · AED 25 · 1100×734 · 209 KB","kind":"image"},{"path":"menu-dishes/fattoush.jpg","name":"Fatoush","sub":"On the menu · AED 29 · 1100×734 · 205 KB","kind":"image"},{"path":"menu-dishes/foul-medames.jpg","name":"Foul Medames","sub":"Extra photo · 1100×734 · 189 KB","kind":"image"},{"path":"menu-dishes/french-fries.jpg","name":"French Fries","sub":"On the menu · AED 19 · 1100×731 · 161 KB","kind":"image"},{"path":"menu-dishes/grilled-meat-cups.jpg","name":"Grilled Meat Cubes","sub":"On the menu · AED 69 · 1100×737 · 243 KB","kind":"image"},{"path":"menu-dishes/hindbeh.jpg","name":"Hindbeh","sub":"Extra photo · 1100×734 · 195 KB","kind":"image"},{"path":"menu-dishes/hommos-beiruti.jpg","name":"Hommos Beiruti","sub":"Extra photo · 1100×734 · 183 KB","kind":"image"},{"path":"menu-dishes/hommos.jpg","name":"Hummous","sub":"On the menu · AED 26 · 1100×734 · 188 KB","kind":"image"},{"path":"menu-dishes/hummous-shawarma.jpg","name":"Hummous with Shawarma","sub":"On the menu · AED 37 · 1100×731 · 179 KB","kind":"image"},{"path":"menu-dishes/kafta-bel-sanieh.jpg","name":"Kafta bel Sanieh","sub":"Extra photo · 1100×734 · 206 KB","kind":"image"},{"path":"menu-dishes/kafta.jpg","name":"Kafta","sub":"On the menu · AED 60 · 1100×737 · 245 KB","kind":"image"},{"path":"menu-dishes/kebbeh-bel-laban.jpg","name":"Kebbeh bel Laban","sub":"Extra photo · 1100×734 · 194 KB","kind":"image"},{"path":"menu-dishes/kids-taouk-combo.jpg","name":"Shish Taouk Kids Combo","sub":"On the menu · AED 27 · 933×1400 · 253 KB","kind":"image"},{"path":"menu-dishes/kousa-warak-enab.jpg","name":"Warak Inab","sub":"On the menu · AED 25 · 1100×734 · 198 KB","kind":"image"},{"path":"menu-dishes/labneh-garlic.jpg","name":"Labneh Garlic","sub":"Extra photo · 1100×734 · 160 KB","kind":"image"},{"path":"menu-dishes/lamb-chops.jpg","name":"Lamb Chops","sub":"On the menu · AED 89 · 1100×734 · 244 KB","kind":"image"},{"path":"menu-dishes/lebanese-breakfast-tray.jpg","name":"Lebanese Breakfast Tray","sub":"Extra photo · 1100×734 · 205 KB","kind":"image"},{"path":"menu-dishes/loubya-bil-zeit.jpg","name":"Loubya bil Zeit","sub":"Extra photo · 1100×737 · 193 KB","kind":"image"},{"path":"menu-dishes/manakish-cheese.jpg","name":"Manakish Cheese","sub":"Extra photo · 1100×737 · 244 KB","kind":"image"},{"path":"menu-dishes/manakish-labneh.jpg","name":"Manakish Labneh","sub":"Extra photo · 1100×734 · 271 KB","kind":"image"},{"path":"menu-dishes/meat-cubes-wrap.jpg","name":"Grilled Meat Cubes Wrap","sub":"On the menu · AED 37 · 1100×731 · 154 KB","kind":"image"},{"path":"menu-dishes/meat-shawarma-combo.jpg","name":"Meat Shawarma Combo","sub":"Extra photo · 907×765 · 169 KB","kind":"image"},{"path":"menu-dishes/meat-shawarma-platter.jpg","name":"Plate Shawarma Meat","sub":"On the menu · AED 47 · 1100×737 · 214 KB","kind":"image"},{"path":"menu-dishes/meat-shawarma-sandwich.jpg","name":"Meat Shawarma Wrap (Large)","sub":"On the menu · AED 26 · 1100×737 · 167 KB","kind":"image"},{"path":"menu-dishes/mixed-grill-1kg.jpg","name":"Mixed Grills · 1 kg","sub":"On the menu · AED 189 · 1100×733 · 227 KB","kind":"image"},{"path":"menu-dishes/mixed-grill.jpg","name":"Mixed Grill","sub":"On the menu · AED 69 · 1100×737 · 239 KB","kind":"image"},{"path":"menu-dishes/mixed-pastries.jpg","name":"Mixed Pastries","sub":"Extra photo · 1100×734 · 180 KB","kind":"image"},{"path":"menu-dishes/mixed-shawarma-platter.jpg","name":"Plate Mixed Shawarma","sub":"On the menu · AED 45 · 1100×737 · 210 KB","kind":"image"},{"path":"menu-dishes/moghrabieh-2.jpg","name":"Moghrabieh (alt)","sub":"Extra photo · 1100×734 · 182 KB","kind":"image"},{"path":"menu-dishes/moghrabieh.jpg","name":"Moghrabieh","sub":"Extra photo · 1100×734 · 190 KB","kind":"image"},{"path":"menu-dishes/mohamara-manakish.jpg","name":"Mohamara Manakish","sub":"Extra photo · 1100×737 · 298 KB","kind":"image"},{"path":"menu-dishes/mohamara.jpg","name":"Mohamara","sub":"Extra photo · 1100×737 · 197 KB","kind":"image"},{"path":"menu-dishes/molokhia.jpg","name":"Molokhia","sub":"Extra photo · 1100×737 · 194 KB","kind":"image"},{"path":"menu-dishes/moussaka.jpg","name":"Moussaka","sub":"Extra photo · 1100×734 · 208 KB","kind":"image"},{"path":"menu-dishes/nutella-manakish.jpg","name":"Nutella Manakish","sub":"Extra photo · 1100×734 · 272 KB","kind":"image"},{"path":"menu-dishes/oriental-rice-chicken.jpg","name":"Oriental Rice Chicken","sub":"Extra photo · 1100×734 · 226 KB","kind":"image"},{"path":"menu-dishes/oriental-rice-meat.jpg","name":"Oriental Rice Meat","sub":"Extra photo · 1100×734 · 223 KB","kind":"image"},{"path":"menu-dishes/quinoa-tabbouleh.jpg","name":"Quinoa Tabbouleh","sub":"Extra photo · 1100×737 · 194 KB","kind":"image"},{"path":"menu-dishes/rocca-salad.jpg","name":"Rocca Salad","sub":"Extra photo · 1100×737 · 172 KB","kind":"image"},{"path":"menu-dishes/sambousek-meat.jpg","name":"Sambousek Meat","sub":"Extra photo · 1100×734 · 188 KB","kind":"image"},{"path":"menu-dishes/sayadieh-fish.jpg","name":"Sayadieh Fish","sub":"Extra photo · 1100×737 · 211 KB","kind":"image"},{"path":"menu-dishes/sfiha-baalbakia-2.jpg","name":"Sfiha Baalbakia (alt)","sub":"Extra photo · 1100×734 · 205 KB","kind":"image"},{"path":"menu-dishes/sfiha-baalbakia.jpg","name":"Sfiha Baalbakia","sub":"Extra photo · 1100×734 · 195 KB","kind":"image"},{"path":"menu-dishes/shish-taouk.jpg","name":"Shish Taouk","sub":"On the menu · AED 56 · 1100×737 · 243 KB","kind":"image"},{"path":"menu-dishes/special-mixed-grill.jpg","name":"Special Mixed Grills · ½ kg","sub":"On the menu · AED 94 · 1100×737 · 250 KB","kind":"image"},{"path":"menu-dishes/spinach-fatayer.jpg","name":"Spinach Fatayer","sub":"Extra photo · 1100×734 · 187 KB","kind":"image"},{"path":"menu-dishes/spinach-manakish.jpg","name":"Spinach Manakish","sub":"Extra photo · 1100×737 · 276 KB","kind":"image"},{"path":"menu-dishes/sujuk.jpg","name":"Sujuk","sub":"Extra photo · 1100×737 · 192 KB","kind":"image"},{"path":"menu-dishes/twin-shawarma-combo.jpg","name":"Twin Shawarma Combo","sub":"Extra photo · 1100×734 · 182 KB","kind":"image"},{"path":"menu-dishes/zaatar-cheese-manakish.jpg","name":"Zaatar Cheese Manakish","sub":"Extra photo · 1100×737 · 292 KB","kind":"image"},{"path":"menu-dishes/zaatar-vegetables.jpg","name":"Zaatar Vegetables","sub":"Extra photo · 1100×737 · 314 KB","kind":"image"}]},{"id":"brand","icon":"✴️","title":"Logo & app icons","ar":"الشعار والأيقونات","note":"The logo files and the icons the menu uses when it's saved to a phone's home screen.","grid":false,"items":[{"path":"brand/logo-color.png","name":"Logo — colour","sub":"481×380 · 107 KB","kind":"image"},{"path":"brand/logo-dark.png","name":"Logo — dark background","sub":"481×380 · 92 KB","kind":"image"},{"path":"review/img/logo.png","name":"Logo — overview page version","sub":"481×380 · 92 KB","kind":"image"},{"path":"icon-192.png","name":"App icon 192","sub":"192×192 · 17 KB","kind":"image"},{"path":"icon-512.png","name":"App icon 512","sub":"512×512 · 74 KB","kind":"image"}]},{"id":"maps","icon":"📍","title":"The two branches","ar":"الفروع","note":"The map links used on the website and the menu.","grid":false,"items":[{"url":"https://maps.google.com/?q=Asli+Beirut+Dubai+Silicon+Oasis","name":"Dubai Silicon Oasis","sub":"Opens Google Maps","kind":"page"},{"url":"https://maps.google.com/?q=Asli+Beirut+Dubai+Hills+Mall","name":"Dubai Hills Mall","sub":"Opens Google Maps","kind":"page"}]}]}</script>
+<script>
+(function(){
+"use strict";
+var DATA = JSON.parse(document.getElementById('data').textContent);
+var CANON = DATA.site;
+
+/* Resolve the site root from wherever this page is actually being served, so the
+   links keep working if the site ever moves (custom domain, different repo name).
+   Opened straight off a hard drive, fall back to the canonical address. */
+var BASE = (function(){
+  if (location.protocol === 'file:') return CANON;
+  var p = location.pathname.replace(/links\/(index\.html)?$/, '');
+  if (p.charAt(p.length-1) !== '/') p += '/';
+  return location.origin + p;
+})();
+var SAME_ORIGIN = location.protocol !== 'file:' && BASE.indexOf(location.origin) === 0;
+
+function abs(item){ return item.url ? item.url : BASE + item.path; }
+function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+var toast = document.getElementById('toast'), toastT;
+function say(msg){
+  toast.textContent = msg; toast.classList.add('show');
+  clearTimeout(toastT); toastT = setTimeout(function(){ toast.classList.remove('show'); }, 1600);
+}
+
+function copy(text, done){
+  function fallback(){
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly','');
+    ta.style.cssText = 'position:fixed;top:-1000px';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); done(true); } catch(e){ done(false); }
+    document.body.removeChild(ta);
+  }
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(function(){ done(true); }, fallback);
+  } else fallback();
+}
+
+/* ---------------------------------------------------------------- render */
+var out = document.getElementById('out'), rows = [];
+
+DATA.groups.forEach(function(g){
+  var h2 = document.createElement('h2');
+  h2.innerHTML = esc(g.icon + ' ' + g.title) +
+    (g.ar ? ' <span class="ar">' + esc(g.ar) + '</span>' : '') +
+    ' <span class="n">' + g.items.length + '</span>';
+  out.appendChild(h2);
+  if (g.note){
+    var n = document.createElement('p'); n.className = 'note'; n.textContent = g.note;
+    out.appendChild(n);
+  }
+  if (g.grid) renderGrid(g); else g.items.forEach(function(it){ out.appendChild(renderRow(it)); });
+});
+
+function track(el, item){
+  rows.push({el: el, item: item, dot: el.querySelector('.dot'),
+             hay: (item.name + ' ' + (item.sub||'') + ' ' + (item.path||'')).toLowerCase()});
+}
+
+function renderRow(it){
+  var u = abs(it);
+  var el = document.createElement('div');
+  el.className = 'row';
+  el.innerHTML =
+    '<span class="dot"></span>' +
+    '<span class="txt"><b></b><small></small></span>' +
+    '<span class="btns">' +
+      '<a class="open" target="_blank" rel="noopener">Open</a>' +
+      '<button class="copy" type="button">Copy</button>' +
+    '</span>';
+  el.querySelector('b').textContent = it.name;
+  el.querySelector('small').textContent = it.sub || '';
+  var a = el.querySelector('.open');
+  a.href = u;
+  a.textContent = it.kind === 'video' ? 'Play' : (it.kind === 'page' ? 'Open' : 'View');
+  el.querySelector('.copy').addEventListener('click', function(){
+    var b = this;
+    copy(u, function(ok){
+      b.textContent = ok ? 'Copied' : 'Failed';
+      b.classList.toggle('done', ok);
+      setTimeout(function(){ b.textContent = 'Copy'; b.classList.remove('done'); }, 1400);
+    });
+  });
+  track(el, it);
+  return el;
+}
+
+function renderGrid(g){
+  var d = document.createElement('details');
+  var s = document.createElement('summary');
+  s.innerHTML = 'Show all ' + g.items.length + ' <span class="hint">tap any one to open it full size</span>';
+  d.appendChild(s);
+  var grid = document.createElement('div');
+  grid.className = 'grid';
+  g.items.forEach(function(it){
+    var u = abs(it);
+    var t = document.createElement('div');
+    t.className = 'tile';
+    t.innerHTML =
+      '<a class="th" target="_blank" rel="noopener"></a>' +
+      '<div class="tb"><b></b><small></small>' +
+      '<span class="mini"><a target="_blank" rel="noopener">Open</a>' +
+      '<button class="copy" type="button">Copy</button></span>' +
+      '<span class="dot hide"></span></div>';
+    var links = t.querySelectorAll('a');
+    links[0].href = u;
+    links[0].style.backgroundImage = 'url("' + u + '")';
+    links[1].href = u;
+    t.querySelector('b').textContent = it.name;
+    t.querySelector('small').textContent = it.sub || '';
+    t.querySelector('.copy').addEventListener('click', function(){
+      var b = this;
+      copy(u, function(ok){ b.textContent = ok ? 'Copied' : 'Failed';
+        setTimeout(function(){ b.textContent = 'Copy'; }, 1400); });
+    });
+    grid.appendChild(t);
+    track(t, it);
+  });
+  d.appendChild(grid);
+  out.appendChild(d);
+  /* Only load the thumbnails once the section is actually opened. */
+  d.addEventListener('toggle', function(){ if (d.open) d.classList.add('loaded'); }, {once:true});
+}
+
+/* ---------------------------------------------------------------- search */
+var q = document.getElementById('q');
+q.addEventListener('input', function(){
+  var term = q.value.trim().toLowerCase();
+  var shown = 0;
+  rows.forEach(function(r){
+    var hit = !term || r.hay.indexOf(term) > -1;
+    r.el.classList.toggle('hide', !hit);
+    if (hit) shown++;
+  });
+  /* open every collapsed gallery while searching, otherwise hits stay hidden */
+  Array.prototype.forEach.call(document.querySelectorAll('details'), function(d){
+    if (term) d.open = true;
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('h2'), function(h){
+    h.classList.remove('hide');
+  });
+  setStatus(term ? shown + ' of ' + rows.length + ' links match “' + q.value.trim() + '”' : '');
+});
+
+var statusEl = document.getElementById('status');
+function setStatus(msg){
+  statusEl.textContent = msg;
+  statusEl.classList.toggle('on', !!msg);
+}
+
+/* ------------------------------------------------------------ copy all */
+document.getElementById('copyall').addEventListener('click', function(){
+  var lines = [];
+  DATA.groups.forEach(function(g){
+    lines.push('— ' + g.title.toUpperCase() + ' —');
+    g.items.forEach(function(it){ lines.push(it.name + ': ' + abs(it)); });
+    lines.push('');
+  });
+  copy(lines.join('\n'), function(ok){
+    say(ok ? 'All ' + rows.length + ' links copied' : 'Copy blocked by the browser');
+  });
+});
+
+/* ------------------------------------------------------- the link test */
+document.getElementById('check').addEventListener('click', function(){
+  var btn = this;
+  if (!SAME_ORIGIN){
+    setStatus('Open this page from the live link to test — a copy saved on the phone can’t check the files.');
+    return;
+  }
+  btn.disabled = true;
+  var list = rows.filter(function(r){ return !r.item.url; });  /* skip Google Maps */
+  var done = 0, bad = 0, i = 0;
+  list.forEach(function(r){ r.dot.className = 'dot wait'; r.dot.classList.remove('hide'); });
+  setStatus('Testing ' + list.length + ' links…');
+
+  function next(){
+    if (i >= list.length) return Promise.resolve();
+    var r = list[i++];
+    return fetch(abs(r.item), {method: 'HEAD', cache: 'no-store'})
+      .then(function(res){ return res.ok; })
+      .catch(function(){ return false; })
+      .then(function(ok){
+        r.dot.className = 'dot ' + (ok ? 'ok' : 'bad');
+        r.el.classList.toggle('bad', !ok);
+        if (!ok) bad++;
+        done++;
+        if (done % 5 === 0 || done === list.length)
+          setStatus('Testing… ' + done + ' of ' + list.length);
+        return next();
+      });
+  }
+  var lanes = [];
+  for (var k = 0; k < 6; k++) lanes.push(next());
+  Promise.all(lanes).then(function(){
+    btn.disabled = false;
+    if (bad === 0){
+      setStatus('✓ All ' + list.length + ' links opened fine. (The 2 map links go to Google and aren’t tested.)');
+      say('All ' + list.length + ' links work');
+    } else {
+      setStatus('✗ ' + bad + ' of ' + list.length + ' links are broken — they are marked in red.');
+      say(bad + ' broken');
+    }
+  });
+});
+})();
+</script>
 </body>
 </html>
