@@ -1,0 +1,23 @@
+{
+  "name": "bmw-edit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "50-second beat-synced grey BMW edit, built with Remotion",
+  "scripts": {
+    "beat": "python3 tools/make_beat.py",
+    "dev": "remotion studio",
+    "build": "remotion render Edit out/bmw-edit.mp4",
+    "still": "remotion still Edit out/frame.png"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.506",
+    "@remotion/google-fonts": "4.0.506",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.506"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "typescript": "5.7.3"
+  }
+}
