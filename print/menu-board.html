@@ -26,8 +26,19 @@
 @page { size: 1200mm 800mm; margin: 0; }
 * { margin:0; padding:0; box-sizing:border-box; }
 html, body { width:1200mm; height:800mm; }
+
+/* The brand's own palette, straight off menu/index.html: cream ground, brown
+   type, olive Arabic, terracotta prices. The screens are dark because screens
+   glow; paper is not, and a metre-wide flood of near-black is both expensive
+   and prone to banding on a press. */
+:root {
+  --cream:#F7F0E1; --paper:#FBF6EB; --ink:#2C2018;
+  --brown:#3A2A20; --brown2:#57402F;
+  --terra:#BC5233; --olive:#3C8450; --gold:#C89B3C;
+  --rule:rgba(58,42,32,.20); --rule-soft:rgba(58,42,32,.14);
+}
 body {
-  background:#141210; color:#F7F0E1;
+  background:var(--cream); color:var(--ink);
   font-family:'Karla',Arial,sans-serif;
   -webkit-print-color-adjust:exact; print-color-adjust:exact;
 }
@@ -37,28 +48,28 @@ body {
    and lays down more evenly on a large press sheet besides. */
 .sheet {
   width:1200mm; height:800mm; padding:26mm 28mm 20mm;
-  display:flex; flex-direction:column; background:#141210;
+  display:flex; flex-direction:column; background:var(--cream);
   /* Every measurement that drives column height is a multiple of this. The
      build binary-searches it for the largest value at which no column runs
      past the footer rule, so the type is as large as the sheet allows rather
      than as large as I guessed. */
-  --s:0.9876;
+  --s:0.9901;
 }
 
 /* ---------- header ---------- */
 .head { display:flex; align-items:center; justify-content:space-between; gap:20mm;
-  padding-bottom:9mm; border-bottom:1.1mm solid rgba(200,155,60,.42); flex:none; }
+  padding-bottom:9mm; border-bottom:1.1mm solid var(--rule); flex:none; }
 .brand { display:flex; align-items:center; gap:11mm; }
 .brand img { width:76mm; display:block; }   /* 481px across 76mm = 161dpi */
 .wordmark { font-family:'Fraunces',Georgia,serif; font-weight:700; font-size:34mm;
-  line-height:.98; letter-spacing:-.004em; }
+  line-height:.98; letter-spacing:-.004em; color:var(--brown); }
 .wordmark .ar { font-family:'Amiri',serif; font-weight:700; direction:rtl;
-  color:#C89B3C; font-size:17mm; line-height:1.24; margin-top:2mm; }
+  color:var(--terra); font-size:17mm; line-height:1.24; margin-top:2mm; }
 .claim { text-align:right; }
 .claim .en { font-weight:700; font-size:8.6mm; letter-spacing:.28em;
-  text-transform:uppercase; color:#E7B24B; line-height:1.3; }
+  text-transform:uppercase; color:var(--terra); line-height:1.3; }
 .claim .ar { font-family:'Amiri',serif; direction:rtl; font-size:10.4mm;
-  color:rgba(247,240,225,.72); margin-top:3mm; }
+  color:var(--brown2); margin-top:3mm; }
 
 /* ---------- columns ---------- */
 .body { flex:1; display:grid; grid-template-columns:repeat(4,1fr); gap:14mm;
@@ -68,12 +79,12 @@ body {
 .sec { display:flex; flex-direction:column; }
 .sechead { display:flex; align-items:baseline; justify-content:space-between;
   gap:4mm; padding-bottom:calc(2.6mm * var(--s)); margin-bottom:calc(3.4mm * var(--s));
-  border-bottom:.62mm solid rgba(200,155,60,.34); }
+  border-bottom:.62mm solid var(--rule); }
 .sechead h2 { font-family:'Fraunces',Georgia,serif; font-weight:700;
   font-size:calc(16mm * var(--s));
-  line-height:1.04; color:#F7F0E1; letter-spacing:-.008em; }
+  line-height:1.04; color:var(--brown); letter-spacing:-.008em; }
 .sechead .ar { font-family:'Amiri',serif; font-weight:700; direction:rtl;
-  font-size:calc(12mm * var(--s)); color:#C89B3C; white-space:nowrap; }
+  font-size:calc(12mm * var(--s)); color:var(--olive); white-space:nowrap; }
 
 /* Sized off the tallest column — Shawarma plus Wraps, thirteen lines under two
    headings — so that column just fills the sheet and the rest follow it. At
@@ -82,52 +93,58 @@ body {
 .item { display:flex; align-items:flex-start; gap:calc(5mm * var(--s));
   padding:calc(5mm * var(--s)) 0; }
 .item .txt { flex:1; min-width:0; }
-.item .en { font-weight:700; font-size:calc(15mm * var(--s));
-  line-height:1.15; letter-spacing:.002em; }
+/* Dish names in Fraunces and prices in terracotta, the same pairing the menu
+   page uses, so the wall and the menu in hand read as one thing. */
+.item .en { font-family:'Fraunces',Georgia,serif; font-weight:700;
+  font-size:calc(15mm * var(--s));
+  line-height:1.14; letter-spacing:-.004em; color:var(--brown); }
 .item .ar { font-family:'Amiri',serif; direction:rtl; font-size:calc(13mm * var(--s));
-  line-height:1.28; color:rgba(247,240,225,.66); margin-top:.4mm; }
+  line-height:1.28; color:var(--olive); margin-top:.4mm; }
 .item .price { font-family:'Fraunces',Georgia,serif; font-weight:700;
   font-size:calc(18mm * var(--s));
-  line-height:1.05; color:#E7B24B; font-variant-numeric:tabular-nums;
+  line-height:1.05; color:var(--terra); font-variant-numeric:tabular-nums;
   white-space:nowrap; padding-top:.6mm; }
 .badge { display:inline-block; font-size:calc(5.6mm * var(--s)); font-weight:700;
-  letter-spacing:.16em; text-transform:uppercase; color:#141210; background:#C89B3C;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--cream);
+  background:var(--terra);
   padding:1.4mm 3.2mm 1mm; border-radius:1.6mm; margin-top:calc(2.2mm * var(--s)); }
 
 /* the two panels that are not lists — sat together against the footer rule */
 .features { margin-top:auto; display:flex; flex-direction:column;
   gap:calc(9mm * var(--s)); }
-.feature { border:.62mm solid rgba(200,155,60,.42); border-radius:3.4mm;
+.feature { border:.62mm solid var(--gold); border-radius:3.4mm;
   padding:calc(8mm * var(--s)) calc(8mm * var(--s)) calc(8.5mm * var(--s));
-  background:rgba(200,155,60,.055); }
+  background:var(--paper); }
 .feature .kick { font-size:calc(6mm * var(--s)); font-weight:700; letter-spacing:.24em;
-  text-transform:uppercase; color:#C89B3C; }
+  text-transform:uppercase; color:var(--terra); }
 /* Karla carries no Arabic-Indic digits, so an unmarked ٣–٤ here silently fell
    back to DejaVu Sans in the first build. Every Arabic run is named explicitly. */
 .feature .kick .ar { font-family:'Amiri',serif; direction:rtl; letter-spacing:0;
   font-size:calc(7.6mm * var(--s)); }
 .feature h3 { font-family:'Fraunces',Georgia,serif; font-weight:700;
-  font-size:calc(14mm * var(--s)); line-height:1.06; margin-top:calc(3mm * var(--s)); }
+  font-size:calc(14mm * var(--s)); line-height:1.06; margin-top:calc(3mm * var(--s));
+  color:var(--brown); }
 .feature .ar { font-family:'Amiri',serif; direction:rtl; font-size:calc(11mm * var(--s));
-  color:rgba(247,240,225,.7); margin-top:calc(1.8mm * var(--s)); }
+  color:var(--olive); margin-top:calc(1.8mm * var(--s)); }
 .feature .desc { font-size:calc(8mm * var(--s)); line-height:1.32;
-  color:rgba(247,240,225,.62); margin-top:calc(4mm * var(--s)); }
+  color:var(--brown2); margin-top:calc(4mm * var(--s)); }
 .feature .row { display:flex; align-items:baseline; justify-content:space-between;
   margin-top:calc(5mm * var(--s)); gap:4mm; }
 .feature .row b { font-family:'Fraunces',Georgia,serif; font-weight:700;
-  font-size:calc(21mm * var(--s)); color:#E7B24B; font-variant-numeric:tabular-nums; }
+  font-size:calc(21mm * var(--s)); color:var(--terra);
+  font-variant-numeric:tabular-nums; }
 
 /* ---------- footer ---------- */
 .foot { flex:none; margin-top:8mm; padding-top:7mm;
-  border-top:1.1mm solid rgba(200,155,60,.42);
+  border-top:1.1mm solid var(--rule);
   display:flex; align-items:center; justify-content:space-between; gap:14mm; }
 .foot .l { font-weight:700; font-size:9mm; letter-spacing:.34em;
-  text-transform:uppercase; color:#C89B3C; }
+  text-transform:uppercase; color:var(--terra); }
 .foot .r { display:flex; align-items:baseline; gap:8mm; }
 .foot .r .en { font-weight:700; font-size:7.6mm; letter-spacing:.20em;
-  text-transform:uppercase; color:rgba(247,240,225,.62); }
+  text-transform:uppercase; color:var(--brown2); }
 .foot .r .ar { font-family:'Amiri',serif; direction:rtl; font-size:9.4mm;
-  color:rgba(247,240,225,.62); }
+  color:var(--brown2); }
 </style></head><body>
 <div class="sheet">
 
@@ -150,7 +167,7 @@ body {
                      <div class="sec"><div class="sechead"><h2>Wraps &amp; Sandwiches</h2><div class="ar">سندويشات ولفائف</div></div><div class="item"><div class="txt"><div class="en">Shish Taouk Sandwich</div><div class="ar">سندويش شيش طاووق</div></div><div class="price">27</div></div><div class="item"><div class="txt"><div class="en">Grilled Kafta Wrap</div><div class="ar">سندويش كفتا</div></div><div class="price">27</div></div><div class="item"><div class="txt"><div class="en">Grilled Chicken Wrap</div><div class="ar">سندويش دجاج مشوي</div></div><div class="price">27</div></div><div class="item"><div class="txt"><div class="en">Grilled Meat Cubes Wrap</div><div class="ar">سندويش لحمة مشوية</div></div><div class="price">37</div></div><div class="item"><div class="txt"><div class="en">Large Falafel Wrap</div><div class="ar">سندويش فلافل كبير</div></div><div class="price">23</div></div><div class="item"><div class="txt"><div class="en">French Fries Wrap</div><div class="ar">سندويش بطاطا</div></div><div class="price">18</div></div></div></div>
     <div class="col"><div class="sec"><div class="sechead"><h2>Kids &amp; Sweets</h2><div class="ar">أطفال وحلويات</div></div><div class="item"><div class="txt"><div class="en">Shish Taouk Kids Combo</div><div class="ar">شيش طاووق كومبو</div></div><div class="price">27</div></div><div class="item"><div class="txt"><div class="en">Kafta Meat Combo</div><div class="ar">كفتا لحم كومبو</div></div><div class="price">27</div></div><div class="item"><div class="txt"><div class="en">Muhalabea</div><div class="ar">مهلبية</div></div><div class="price">17</div></div></div>
                      <div class="sec"><div class="sechead"><h2>Make It Better</h2><div class="ar">كمّل طلبك</div></div><div class="item"><div class="txt"><div class="en">Add Cheese</div><div class="ar">إضافة جبنة</div></div><div class="price">5</div></div><div class="item"><div class="txt"><div class="en">Small Salad</div><div class="ar">سلطة صغيرة</div></div><div class="price">10</div></div><div class="item"><div class="txt"><div class="en">Upgrade to Hummous with Shawarma</div><div class="ar">حمص بالشاورما</div></div><div class="price">37</div></div></div>
-                     <div class="features"><div class="feature"><div class="kick">Feeds 3&ndash;4 &nbsp;·&nbsp; <span class="ar">يكفي ٣–٤</span></div><h3>Mixed Grills &mdash; 1 kg</h3><div class="ar">مشاوي مشكلة ١ كغ</div><div class="desc">Taouk · Kafta · Meat cubes · Arayes,<br>straight off the charcoal</div><div class="row"><b>189</b><span style="font-weight:700;font-size:7mm;letter-spacing:.2em;color:rgba(247,240,225,.6)">AED</span></div></div><div class="feature"><div class="kick">House signature &nbsp;·&nbsp; <span class="ar">طبق البيت</span></div><h3>Plate Mixed Shawarma</h3><div class="ar">صحن شاورما مشكل</div><div class="desc">Chicken &amp; meat, garlic toum,<br>pickles, fries</div><div class="row"><b>45</b><span style="font-weight:700;font-size:7mm;letter-spacing:.2em;color:rgba(247,240,225,.6)">AED</span></div></div></div></div>
+                     <div class="features"><div class="feature"><div class="kick">Feeds 3&ndash;4 &nbsp;·&nbsp; <span class="ar">يكفي ٣–٤</span></div><h3>Mixed Grills &mdash; 1 kg</h3><div class="ar">مشاوي مشكلة ١ كغ</div><div class="desc">Taouk · Kafta · Meat cubes · Arayes,<br>straight off the charcoal</div><div class="row"><b>189</b><span style="font-weight:700;font-size:7mm;letter-spacing:.2em;color:#57402F">AED</span></div></div><div class="feature"><div class="kick">House signature &nbsp;·&nbsp; <span class="ar">طبق البيت</span></div><h3>Plate Mixed Shawarma</h3><div class="ar">صحن شاورما مشكل</div><div class="desc">Chicken &amp; meat, garlic toum,<br>pickles, fries</div><div class="row"><b>45</b><span style="font-weight:700;font-size:7mm;letter-spacing:.2em;color:#57402F">AED</span></div></div></div></div>
   </div>
 
   <div class="foot">
