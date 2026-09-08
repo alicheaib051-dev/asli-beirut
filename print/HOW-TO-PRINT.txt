@@ -1,0 +1,60 @@
+ASLI BEIRUT — PRINT INSTRUCTIONS
+=================================
+
+Give this file to the printer along with the artwork.
+
+
+1. FINISHED SIZE — PRINT AT 100%, DO NOT SCALE
+----------------------------------------------
+Every file is built at its exact finished size. The size is in the filename.
+
+    Asli-Beirut-Menu-Board-1200x800mm...      1200 x 800 mm   (landscape)
+    Asli-Beirut-Bowl-Offers-1200x800mm...     1200 x 800 mm   (landscape)
+    Asli-Beirut-Bowl-Offers-800x1000mm...      800 x 1000 mm  (portrait)
+    Asli-Beirut-Bowl-Offers-800x1200mm...      800 x 1200 mm  (portrait)
+
+Do NOT use "fit to page", "shrink to fit", "scale to media" or any auto-fit.
+Set the output to the size above and print at 100%. If the printer's media is
+a different width, the artwork must be reprinted at the correct size, not
+scaled — scaling is what makes the type come out small and soft.
+
+
+2. WHICH FILE TO USE
+--------------------
+Use the .pdf first. It is a true 1200 x 800 mm (or 800 x 1000 / 800 x 1200)
+page with live type, so it is sharp at any output size.
+
+If the PDF gives any trouble at all — substituted fonts, soft type, a RIP that
+will not take it — use the -300dpi.png instead. It is a flat image at the exact
+finished size, 300 dpi, with nothing left to interpret: no fonts, no vectors.
+
+    -300dpi.png    300 dpi at final size — use this if the PDF misbehaves
+    -150dpi.png    150 dpi at final size — smaller file, fine for large format
+                   viewed from 1.5 m or further
+
+All PNGs now carry their physical size inside the file (a pHYs record), so
+placing software will read 1200 x 800 mm by itself instead of guessing.
+
+
+3. COLOUR
+---------
+Artwork is supplied in RGB. Convert to the press profile at your end.
+The cream ground is #F7F0E1, the prices #BC5233, the Arabic #3C8450.
+Please keep the cream flat — it should not band across the sheet.
+
+
+4. BLEED
+--------
+Supplied with NO bleed, trimmed to the exact size above. If the job is being
+trimmed or wrapped and you need bleed, say how much (usually 3–5 mm) and a new
+file will be supplied with it — do not add bleed by scaling the artwork up,
+because that shrinks everything else.
+
+
+5. IF THE TYPE NEEDS TO BE BIGGER
+---------------------------------
+The menu board carries 42 dishes on one sheet, which is what sets the type at
+about 15 mm. Type that size is comfortable to about 3 metres. If it has to
+read from further than that, the menu needs to go onto two sheets rather than
+one — ask, and it will be rebuilt that way. Do not print this file larger to
+compensate unless the finished size genuinely changes.
