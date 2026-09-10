@@ -46,10 +46,10 @@ Vertical (9:16) for Instagram, TikTok and WhatsApp status. Landscape (16:9) for 
 
 One looping file per screen — dishes left and right, prices and offers in the middle. Save each to a USB stick, plug it into the TV, set it to repeat.
 
-- [TV 1 — Mezze & Shawarma](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Mezze-Shawarma.mp4) — 11 dishes · 1920×1080 · 38s · 16.1 MB
-- [TV 2 (middle) — Prices & Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Offers-Loop.mp4) — 3 rotating boards incl. the NEW burgers · 1920×1080 · 27s · 3.4 MB
-- [TV 2 — static version](https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png) — The same board as one still image, if the middle screen can't play video · 1920×1080 · 2.3 MB
-- [TV 3 — Charcoal Grills](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Grills.mp4) — 7 dishes · 1920×1080 · 26s · 12.4 MB
+- [TV 1 — Menu Board · Mezze & Shawarma](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 11.8 MB
+- [TV 2 (middle) — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Bowl-Offers.mp4) — Four bowls 30 · 30 · 36 · 36, then Duo 60 · 1920×1080 · 33s · 3.9 MB
+- [TV 2 — static version](https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png) — The same five offers as one still image, if the middle screen can't play video · 1920×1080 · 1.4 MB
+- [TV 3 — Menu Board · Grills & Burgers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Menu-Grills-Burgers.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 13.6 MB
 
 ## 🖼️ Social & print images (5)
 

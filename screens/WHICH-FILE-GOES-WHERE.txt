@@ -1,43 +1,54 @@
-ASLI BEIRUT — SCREEN FILES
-==========================
+ASLI BEIRUT — WHICH FILE GOES ON WHICH SCREEN
+=============================================
 
-Every file here plays at BOTH branches. There is no Dubai Hills cut and no
-Silicon Oasis cut any more — the two screens run the same films, and the
-closing card names both branches.
-
-
-THE THREE WALL SCREENS (1920 x 1080, landscape, silent, H.264)
---------------------------------------------------------------
-  Asli-TV1-Mezze-Shawarma.mp4    TV 1 — mezze and shawarma
-  Asli-TV2-Bowl-Offers.mp4       TV 2 — the bowl offers    60 s
-  Asli-TV3-Grills.mp4            TV 3 — charcoal grills
-
-  TV2-Offers-Static.png          the same offers on one still frame, for a
-                                 screen that cannot play video, or to pause on
+Every file below plays at BOTH branches. There is no Dubai Hills cut and no
+Silicon Oasis cut — the two branches run the same films, and the closing card
+names them both.
 
 
-THE VERTICAL SCREENS (1080 x 1920, portrait, silent, H.264)
-------------------------------------------------------------
+THE THREE WALL SCREENS (1920 x 1080, landscape, silent)
+--------------------------------------------------------
+These live in review/v/ — that is where the website, the overview page and the
+links page all point, so there is one copy of each and it cannot go stale:
+
+  review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4    TV 1 — menu board, 3 pages · 37s
+  review/v/Asli-TV2-Bowl-Offers.mp4            TV 2 — the bowl offers    · 33s
+  review/v/Asli-TV3-Menu-Grills-Burgers.mp4    TV 3 — menu board, 3 pages · 37s
+
+  review/img/TV2-Offers-Static.png             the same offers on one still
+                                               frame, for a screen that cannot
+                                               play video, or to pause on
+
+
+THE VERTICAL SCREENS (1080 x 1920, portrait, silent) — in this folder
+----------------------------------------------------------------------
   Asli-Bowls-NoDessert-Vertical-1080x1920.mp4    the four plain bowls    28 s
   Asli-Combo-Offers-Vertical-1080x1920.mp4       the six combos          35 s
 
 
-PRICES ON THESE SCREENS
------------------------
-Bowls, bowl only, in the order they play:
-
+WHAT TV 2 SAYS, IN ORDER
+------------------------
       Chicken Shawarma Bowl    30
       Chicken Tawook Bowl      30
       Meat Shawarma Bowl       36
       Kafta Bowl               36
+      Duo Chicken Combo        60
 
-Half chicken charcoal grill reads 56 everywhere — TV 2, TV 3, the combo loop,
-the printed menu board and the website.
+The four bowls run in that order on the loop, on the still frame and on the
+printed bowl boards in print/.
 
-ONE THING STILL TO SETTLE. Later in the TV 2 loop the bowl-plus-Ashta-baklava-
-plus-Pepsi signs read 36 / 36 / 43 / 43, and the line above the static board
-says the dessert adds 6 AED. That worked when the meat and kafta bowls were 37.
-At 36 it does not: 36 + 6 is 42, not 43. So either those two combo signs should
-come down to 42, or the add-on is 7 on those two and the "6 AED" line needs to
-say so. Nothing here has been changed to guess at it — say which, and it will
-be repainted.
+The bowl-plus-Ashta-baklava-plus-Pepsi signs are no longer on this screen. They
+priced the meat and kafta bowls at 43, which was the bowl plus 6 while the bowl
+was 37; at 36 that sum stopped working. If those offers should come back, say
+what the four combo prices are and they go back on.
+
+
+HALF CHICKEN
+------------
+56 everywhere — TV 3, the printed menu board, the combo loop and the website.
+
+
+ONE THING STILL MISSING
+-----------------------
+TV 3's Wraps & Burgers page has no Grilled Chicken Wrap, which the menu prices
+at 27. Say the word and it goes on.
