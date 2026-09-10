@@ -12,7 +12,7 @@ These live in review/v/ — that is where the website, the overview page and the
 links page all point, so there is one copy of each and it cannot go stale:
 
   review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4    TV 1 — menu board, 3 pages · 37s
-  review/v/Asli-TV2-Bowl-Offers.mp4            TV 2 — the bowl offers    · 33s
+  review/v/Asli-TV2-Bowl-Offers.mp4            TV 2 — the bowl offers    · 51s
   review/v/Asli-TV3-Menu-Grills-Burgers.mp4    TV 3 — menu board, 3 pages · 37s
 
   review/img/TV2-Offers-Static.png             the same offers on one still
@@ -26,21 +26,30 @@ THE VERTICAL SCREENS (1080 x 1920, portrait, silent) — in this folder
   Asli-Combo-Offers-Vertical-1080x1920.mp4       the six combos          35 s
 
 
-WHAT TV 2 SAYS, IN ORDER
-------------------------
+WHAT TV 2 PLAYS, IN ORDER
+-------------------------
+First the four bowls on their own:
+
       Chicken Shawarma Bowl    30
       Chicken Tawook Bowl      30
       Meat Shawarma Bowl       36
       Kafta Bowl               36
-      Duo Chicken Combo        60
 
-The four bowls run in that order on the loop, on the still frame and on the
-printed bowl boards in print/.
+then "The Combos", and the same four bowls with an Ashta baklava and a Pepsi:
 
-The bowl-plus-Ashta-baklava-plus-Pepsi signs are no longer on this screen. They
-priced the meat and kafta bowls at 43, which was the bowl plus 6 while the bowl
-was 37; at 36 that sum stopped working. If those offers should come back, say
-what the four combo prices are and they go back on.
+      Chicken Shawarma Bowl    36
+      Chicken Tawook Bowl      36
+      Meat Shawarma Bowl       43
+      Kafta Bowl               43
+
+The Duo Chicken Combo is off this screen.
+
+WORTH KNOWING: the dessert adds 6 AED to the two chicken bowls and 7 AED to the
+meat and the kafta. That is why there is no single "add dessert for 6 AED" line
+above the cards any more — it would only be true of half of them. Each card
+carries its own two prices instead. If the meat and kafta combos should come
+down to 42, say so and both the film and the board are reprinted in a few
+minutes.
 
 
 HALF CHICKEN
