@@ -1,0 +1,43 @@
+ASLI BEIRUT — SCREEN FILES
+==========================
+
+Every file here plays at BOTH branches. There is no Dubai Hills cut and no
+Silicon Oasis cut any more — the two screens run the same films, and the
+closing card names both branches.
+
+
+THE THREE WALL SCREENS (1920 x 1080, landscape, silent, H.264)
+--------------------------------------------------------------
+  Asli-TV1-Mezze-Shawarma.mp4    TV 1 — mezze and shawarma
+  Asli-TV2-Bowl-Offers.mp4       TV 2 — the bowl offers    60 s
+  Asli-TV3-Grills.mp4            TV 3 — charcoal grills
+
+  TV2-Offers-Static.png          the same offers on one still frame, for a
+                                 screen that cannot play video, or to pause on
+
+
+THE VERTICAL SCREENS (1080 x 1920, portrait, silent, H.264)
+------------------------------------------------------------
+  Asli-Bowls-NoDessert-Vertical-1080x1920.mp4    the four plain bowls    28 s
+  Asli-Combo-Offers-Vertical-1080x1920.mp4       the six combos          35 s
+
+
+PRICES ON THESE SCREENS
+-----------------------
+Bowls, bowl only, in the order they play:
+
+      Chicken Shawarma Bowl    30
+      Chicken Tawook Bowl      30
+      Meat Shawarma Bowl       36
+      Kafta Bowl               36
+
+Half chicken charcoal grill reads 56 everywhere — TV 2, TV 3, the combo loop,
+the printed menu board and the website.
+
+ONE THING STILL TO SETTLE. Later in the TV 2 loop the bowl-plus-Ashta-baklava-
+plus-Pepsi signs read 36 / 36 / 43 / 43, and the line above the static board
+says the dessert adds 6 AED. That worked when the meat and kafta bowls were 37.
+At 36 it does not: 36 + 6 is 42, not 43. So either those two combo signs should
+come down to 42, or the add-on is 7 on those two and the "6 AED" line needs to
+say so. Nothing here has been changed to guess at it — say which, and it will
+be repainted.
