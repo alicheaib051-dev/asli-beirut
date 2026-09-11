@@ -4,7 +4,7 @@ All 134 links, updated 28 July 2026. Live page: <https://alicheaib051-dev.github
 
 Prices match the current 41-dish menu. Nothing is posted publicly — these links are unlisted.
 
-## 🌐 Live pages (4)
+## 🌐 Live pages (5)
 
 These are the links to actually send people. Everything else below is a raw file inside them.
 
@@ -12,6 +12,7 @@ These are the links to actually send people. Everything else below is a raw file
 - [The QR Menu](https://alicheaib051-dev.github.io/asli-beirut/menu/) — 41 dishes · 7 sections · 24 photos · English + Arabic search · installs to the home screen
 - [Overview page](https://alicheaib051-dev.github.io/asli-beirut/review/) — Every ad, TV screen and social image playable in one scroll — the best link to show someone
 - [The short links page](https://alicheaib051-dev.github.io/asli-beirut/links/) — Just the website, the menu, the 3 screens and the ads — the one to send people
+- [Every video on one page](https://alicheaib051-dev.github.io/asli-beirut/links/videos/) — All 15 films with the size and length of each — the one to send when someone only wants the videos
 
 ## 🎯 Jump straight to a section (13)
 
