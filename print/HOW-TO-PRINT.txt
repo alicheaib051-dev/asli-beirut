@@ -8,6 +8,7 @@ Give this file to the printer along with the artwork.
 ----------------------------------------------
 Every file is built at its exact finished size. The size is in the filename.
 
+    Asli-Beirut-Paper-Menu-A4...               210 x 297 mm   (A4, 2 sides)
     Asli-Beirut-Menu-Board-1200x800mm...      1200 x 800 mm   (landscape)
     Asli-Beirut-Bowl-Offers-1200x800mm...     1200 x 800 mm   (landscape)
     Asli-Beirut-Bowl-Offers-800x1000mm...      800 x 1000 mm  (portrait)
@@ -19,7 +20,21 @@ a different width, the artwork must be reprinted at the correct size, not
 scaled — scaling is what makes the type come out small and soft.
 
 
-2. WHICH FILE TO USE
+2. THE PAPER MENU IS DIFFERENT FROM THE BOARD
+---------------------------------------------
+The A4 paper menu is the handout — the one you give people, two sides on one
+sheet. Print it double-sided, short-edge or long-edge makes no difference since
+both sides read the same way up. Plain white 120-170 gsm is ideal; anything
+from ordinary copier paper upwards works.
+
+    Asli-Beirut-Paper-Menu-A4.pdf              both sides, one file
+    ...-side1-300dpi.png / ...-side2-300dpi.png   one flat image per side
+
+The 1200 x 800 mm board is the wall fixture. They carry the same dishes and the
+same prices; neither replaces the other.
+
+
+3. WHICH FILE TO USE
 --------------------
 Use the .pdf first. It is a true 1200 x 800 mm (or 800 x 1000 / 800 x 1200)
 page with live type, so it is sharp at any output size.
@@ -36,14 +51,14 @@ All PNGs now carry their physical size inside the file (a pHYs record), so
 placing software will read 1200 x 800 mm by itself instead of guessing.
 
 
-3. COLOUR
+4. COLOUR
 ---------
 Artwork is supplied in RGB. Convert to the press profile at your end.
 The cream ground is #F7F0E1, the prices #BC5233, the Arabic #3C8450.
 Please keep the cream flat — it should not band across the sheet.
 
 
-4. BLEED
+5. BLEED
 --------
 Supplied with NO bleed, trimmed to the exact size above. If the job is being
 trimmed or wrapped and you need bleed, say how much (usually 3–5 mm) and a new
@@ -51,7 +66,7 @@ file will be supplied with it — do not add bleed by scaling the artwork up,
 because that shrinks everything else.
 
 
-5. IF THE TYPE NEEDS TO BE BIGGER
+6. IF THE TYPE NEEDS TO BE BIGGER
 ---------------------------------
 The menu board carries 42 dishes on one sheet, which is what sets the type at
 about 15 mm. Type that size is comfortable to about 3 metres. If it has to

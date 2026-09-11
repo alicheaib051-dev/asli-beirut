@@ -54,6 +54,14 @@ One looping file per screen — three for the wall TVs, two for a portrait scree
 - [Vertical — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Bowls-NoDessert-Vertical-1080x1920.mp4) — For a portrait screen · the four bowls · 1080×1920 · 28s · 5.1 MB
 - [Vertical — Combo Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Combo-Offers-Vertical-1080x1920.mp4) — For a portrait screen · the five sandwich combos · 1080×1920 · 31s · 6.9 MB
 
+## 🍽️ The paper menu (3)
+
+A4, two sides, flat — the handout version of the menu. Print double-sided on any printer. The offers are deliberately not on it: they change, and paper does not.
+
+- [Paper menu — both sides (PDF)](https://alicheaib051-dev.github.io/asli-beirut/print/Asli-Beirut-Paper-Menu-A4.pdf) — True A4, live type · 0.43 MB
+- [Paper menu — side 1 (300 dpi)](https://alicheaib051-dev.github.io/asli-beirut/print/Asli-Beirut-Paper-Menu-A4-side1-300dpi.png) — Mezze & starters · charcoal grills · burgers · 2480×3508 · 0.4 MB
+- [Paper menu — side 2 (300 dpi)](https://alicheaib051-dev.github.io/asli-beirut/print/Asli-Beirut-Paper-Menu-A4-side2-300dpi.png) — Shawarma · wraps · kids & sweets · extras · 2480×3508 · 0.5 MB
+
 ## 🖼️ Social & print images (5)
 
 Feed posts at current prices, the family offer tile, and the A4 poster at true 300 dpi print size.
