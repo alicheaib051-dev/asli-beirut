@@ -23,7 +23,7 @@ links page all point, so there is one copy of each and it cannot go stale:
 THE VERTICAL SCREENS (1080 x 1920, portrait, silent) — in this folder
 ----------------------------------------------------------------------
   Asli-Bowls-NoDessert-Vertical-1080x1920.mp4    the four plain bowls    28 s
-  Asli-Combo-Offers-Vertical-1080x1920.mp4       the six combos          35 s
+  Asli-Combo-Offers-Vertical-1080x1920.mp4       the five combos         31 s
 
 
 WHAT TV 2 PLAYS, IN ORDER
@@ -52,7 +52,9 @@ re-set — the rest of each sign is the original artwork, pixel for pixel.
 
 HALF CHICKEN
 ------------
-56 everywhere — TV 3, the printed menu board, the combo loop and the website.
+56, and on TV 3 only. It is a grill, not an offer, so it is off the combo loop
+at the owner's word — one room, not two. The printed menu board and the website
+carry it at 56 as well.
 
 
 ONE THING STILL MISSING
