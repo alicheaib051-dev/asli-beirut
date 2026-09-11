@@ -42,14 +42,16 @@ Vertical (9:16) for Instagram, TikTok and WhatsApp status. Landscape (16:9) for 
 - [Our Dishes, the wheel — Vertical](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-OurDishes-Vertical.mp4) — The showpiece · 1080×1920 · 23s · 23.1 MB
 - [Our Dishes, the wheel — Landscape](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-Ad-OurDishes-Landscape.mp4) — The showpiece · 1920×1080 · 23s · 24.8 MB
 
-## 📺 The 3 TV screens (4)
+## 📺 The screens (6)
 
-One looping file per screen — dishes left and right, prices and offers in the middle. Save each to a USB stick, plug it into the TV, set it to repeat.
+One looping file per screen — three for the wall TVs, two for a portrait screen. Save each to a USB stick, plug it in, set it to repeat. Every file plays at both branches.
 
 - [TV 1 — Menu Board · Mezze & Shawarma](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 11.8 MB
-- [TV 2 (middle) — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Bowl-Offers.mp4) — Four bowls 30 · 30 · 36 · 36, then the same four with Ashta baklava + Pepsi · 1920×1080 · 51s · 7.4 MB
-- [TV 2 — static version](https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png) — All four bowls with both prices as one still image, if the middle screen can't play video · 1920×1080 · 1.3 MB
+- [TV 2 (middle) — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Bowl-Offers.mp4) — Four bowls 30 · 30 · 36 · 36, then the same four with Ashta baklava + Pepsi at 36 · 36 · 42 · 42 · 1920×1080 · 51s · 7.3 MB
+- [TV 2 — static version](https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png) — All four bowls with both prices as one still image, if the middle screen can't play video · 1920×1080 · 1.4 MB
 - [TV 3 — Menu Board · Grills & Burgers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Menu-Grills-Burgers.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 13.6 MB
+- [Vertical — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Bowls-NoDessert-Vertical-1080x1920.mp4) — For a portrait screen · the four bowls · 1080×1920 · 28s · 5.1 MB
+- [Vertical — Combo Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Combo-Offers-Vertical-1080x1920.mp4) — For a portrait screen · the six sandwich & grill combos · 1080×1920 · 35s · 8.3 MB
 
 ## 🖼️ Social & print images (5)
 

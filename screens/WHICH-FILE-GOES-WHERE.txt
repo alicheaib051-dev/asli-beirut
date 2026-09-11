@@ -39,17 +39,15 @@ then "The Combos", and the same four bowls with an Ashta baklava and a Pepsi:
 
       Chicken Shawarma Bowl    36
       Chicken Tawook Bowl      36
-      Meat Shawarma Bowl       43
-      Kafta Bowl               43
+      Meat Shawarma Bowl       42
+      Kafta Bowl               42
 
 The Duo Chicken Combo is off this screen.
 
-WORTH KNOWING: the dessert adds 6 AED to the two chicken bowls and 7 AED to the
-meat and the kafta. That is why there is no single "add dessert for 6 AED" line
-above the cards any more — it would only be true of half of them. Each card
-carries its own two prices instead. If the meat and kafta combos should come
-down to 42, say so and both the film and the board are reprinted in a few
-minutes.
+The dessert adds 6 AED to every bowl, so the still board carries that line above
+the cards again as well as both prices on each card. The meat and kafta combos
+read 43 until the owner took them to 42; those two signs were repainted, not
+re-set — the rest of each sign is the original artwork, pixel for pixel.
 
 
 HALF CHICKEN
