@@ -47,10 +47,10 @@ Vertical (9:16) for Instagram, TikTok and WhatsApp status. Landscape (16:9) for 
 
 One looping file per screen — three for the wall TVs, two for a portrait screen. Save each to a USB stick, plug it in, set it to repeat. Every file plays at both branches.
 
-- [TV 1 — Menu Board · Mezze & Shawarma](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 11.8 MB
-- [TV 2 (middle) — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Bowl-Offers.mp4) — Four bowls 30 · 30 · 36 · 36, then the same four with Ashta baklava + Pepsi at 36 · 36 · 42 · 42 · 1920×1080 · 51s · 7.3 MB
+- [TV 1 — Menu Board · Mezze & Shawarma](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV1-Menu-Mezze-Shawarma.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 11.6 MB
+- [TV 2 (middle) — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV2-Bowl-Offers.mp4) — Four bowls 30 · 30 · 37 · 37, then the same four with Ashta baklava + Pepsi at 36 · 36 · 43 · 43 · 1920×1080 · 51s · 7.4 MB
 - [TV 2 — static version](https://alicheaib051-dev.github.io/asli-beirut/review/img/TV2-Offers-Static.png) — All four bowls with both prices as one still image, if the middle screen can't play video · 1920×1080 · 1.4 MB
-- [TV 3 — Menu Board · Grills & Burgers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Menu-Grills-Burgers.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 13.6 MB
+- [TV 3 — Menu Board · Grills & Burgers](https://alicheaib051-dev.github.io/asli-beirut/review/v/Asli-TV3-Menu-Grills-Burgers.mp4) — Big-type menu list, 3 pages · 1920×1080 · 37s · 12.9 MB
 - [Vertical — Bowl Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Bowls-NoDessert-Vertical-1080x1920.mp4) — For a portrait screen · the four bowls · 1080×1920 · 28s · 5.1 MB
 - [Vertical — Combo Offers](https://alicheaib051-dev.github.io/asli-beirut/screens/Asli-Combo-Offers-Vertical-1080x1920.mp4) — For a portrait screen · the five sandwich combos · 1080×1920 · 31s · 6.9 MB
 

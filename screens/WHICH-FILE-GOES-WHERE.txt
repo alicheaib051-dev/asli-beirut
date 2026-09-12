@@ -32,22 +32,23 @@ First the four bowls on their own:
 
       Chicken Shawarma Bowl    30
       Chicken Tawook Bowl      30
-      Meat Shawarma Bowl       36
-      Kafta Bowl               36
+      Meat Shawarma Bowl       37
+      Kafta Bowl               37
 
 then "The Combos", and the same four bowls with an Ashta baklava and a Pepsi:
 
       Chicken Shawarma Bowl    36
       Chicken Tawook Bowl      36
-      Meat Shawarma Bowl       42
-      Kafta Bowl               42
+      Meat Shawarma Bowl       43
+      Kafta Bowl               43
 
 The Duo Chicken Combo is off this screen.
 
-The dessert adds 6 AED to every bowl, so the still board carries that line above
-the cards again as well as both prices on each card. The meat and kafta combos
-read 43 until the owner took them to 42; those two signs were repainted, not
-re-set — the rest of each sign is the original artwork, pixel for pixel.
+The dessert adds 6 AED to every bowl, which is the point of the line above the
+cards on the still board. The meat and kafta bowls read 36 for a while against
+combos of 43, which made the dessert 7 on those two; they are back at 37, so it
+is 6 on all four again. The combo signs are the original artwork, untouched —
+it is the meat bowl card that was repainted, on main's own render.
 
 
 HALF CHICKEN
@@ -57,7 +58,13 @@ at the owner's word — one room, not two. The printed menu board and the websit
 carry it at 56 as well.
 
 
-ONE THING STILL MISSING
------------------------
-TV 3's Wraps & Burgers page has no Grilled Chicken Wrap, which the menu prices
-at 27. Say the word and it goes on.
+WHAT CHANGED LAST
+-----------------
+Muhalabea is off TV 1. It was the last line on the Hot Mezze & Sides page, so
+nothing moved up to fill the gap — the page is simply one line shorter. It is
+still on the printed menu board, the paper menu and the website; say the word
+and it comes off those too.
+
+The Grilled Chicken Wrap is on TV 3 at 27, which the menu had and the screen did
+not. Its page was full at seven lines, so the whole list was set again at eight,
+a tenth smaller. The two pages before it are the film's own frames, untouched.
