@@ -9,6 +9,7 @@ Give this file to the printer along with the artwork.
 Every file is built at its exact finished size. The size is in the filename.
 
     Asli-Beirut-Paper-Menu-A4...               210 x 297 mm   (A4, 2 sides)
+    Asli-Beirut-Menu-Board-800x400mm...        800 x 400 mm   (landscape)  <- the one to print
     Asli-Beirut-Menu-Board-1200x800mm...      1200 x 800 mm   (landscape)
     Asli-Beirut-Bowl-Offers-1200x800mm...     1200 x 800 mm   (landscape)
     Asli-Beirut-Bowl-Offers-800x1000mm...      800 x 1000 mm  (portrait)
@@ -30,8 +31,15 @@ from ordinary copier paper upwards works.
     Asli-Beirut-Paper-Menu-A4.pdf              both sides, one file
     ...-side1-300dpi.png / ...-side2-300dpi.png   one flat image per side
 
-The 1200 x 800 mm board is the wall fixture. They carry the same dishes and the
-same prices; neither replaces the other.
+The menu board is the wall fixture. They carry the same dishes and the same
+prices; neither replaces the other.
+
+The board comes at two sizes. 800 x 400 mm is the one the owner settled on and
+the one to print. 1200 x 800 mm is the earlier, larger cut of the same artwork,
+kept in case a bigger wall turns up. On the 800 x 400 the dish names carry
+about 5 mm of cap height, which reads comfortably from roughly a metre — right
+for a board people walk up to, too small for one read across a room. On the
+1200 x 800 the same names are about 10 mm and hold up at three or four metres.
 
 
 3. WHICH FILE TO USE
