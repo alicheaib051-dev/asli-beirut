@@ -80,7 +80,15 @@ body {
 
 /* The undressed dishes sit below the photographed ones with no tile at all,
    so their names run to the section's own left edge. */
+/* A dish with no photograph still starts where the photographed ones start.
+   Without this its name runs back to the column edge while the illustrated
+   ones sit a tile-width in, and the left of every column comes out in two
+   ragged steps — which reads as a mistake rather than as a choice. The indent
+   is the tile plus the gap beside it, so the two kinds of row line up exactly. */
 .item.plain { padding:calc(2.27mm * var(--s)) 0; }
+/* Only on the illustrated cut: on the type-only board nothing is indented, so
+   there is nothing to line up with and the space would just be lost. */
+.sheet.illustrated .item.plain { padding-left:calc(23.0mm * var(--s)); }
 .turn { height:calc(2.27mm * var(--s)); }
 .item .thumb img { width:100%; height:100%; object-fit:cover; display:block;
   border-radius:1.47mm; }
@@ -138,7 +146,7 @@ body {
 .foot .r .ar { font-family:'Amiri',serif; direction:rtl; font-size:6.27mm;
   color:var(--brown2); }
 </style></head><body>
-<div class="sheet">
+<div class="sheet illustrated">
 
   <div class="head">
     <div class="brand">
